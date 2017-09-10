@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{69C80FC4-6CA3-4E55-B096-9FB357ED0608}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/Views/Profile/EmpProfile.xaml">
+    <Files>
+      <File FileName="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" Line="56" Column="40" />
+      <File FileName="EmpTrack/Views/Profile/EmpProfile.xaml" Line="30" Column="58" />
+      <File FileName="../../UVSoft/UFCW/UFCW/ViewModels/Claims/SearchClaimViewModel.cs" Line="176" Column="10" />
+      <File FileName="../../UVSoft/UFCW/UFCW/Views/Pages/Claim/SearchClaimPage.xaml" Line="30" Column="73" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/waqas/Downloads/Xamarin-Custom-Controls-master/src/Xamarin.CustomControls.Accordion/AccordionView.cs" line="67" column="1" />
+      <Breakpoint file="/Users/waqas/Projects/EmpTrack/EmpTrack/ViewModels/User/EmpProfileViewModel.cs" relfile="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" line="36" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../UVSoft/MallSage-Xamarin/MallSage/Droid/views/fragments/HomeFragment.cs" line="299" offsetX="436" offsetY="4470" expression="FeaturedViewAdapter.Count" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.EmpTrack.Droid PreferredExecutionTarget="Android.Nexus_4_API_23" />
+  <MonoDevelop.Ide.ItemProperties.EmpTrack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.317F97E1-5E1C-42B5-9D0E-8A3C48922508" />
+  <MultiItemStartupConfigurations />
+</Properties>

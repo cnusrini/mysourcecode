@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Master Page"
+    Icon="hamburger.png"
+    BackgroundColor="{StaticResource HamburgerBackground}"
+    x:Class="EmpTrack.Views.Menu.MasterPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 60, 0, 0"
+        Android="0, 60, 0, 0"/>
+     </ContentPage.Padding>
+        <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <ListView  x:Name="listView"  BackgroundColor="{StaticResource HamburgerBackground}" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Margin="10,0,0,0" Text="{Binding Title}" TextColor="Black" VerticalOptions="FillAndExpand"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
