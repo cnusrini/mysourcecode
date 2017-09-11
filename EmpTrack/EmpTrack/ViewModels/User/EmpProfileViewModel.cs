@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using EmpTrack.Constants;
 using EmpTrack.Models;
+using Services.Models;
+using Services.User;
 using Xamarin.Forms;
 
 namespace EmpTrack.ViewModels.User
@@ -29,23 +34,64 @@ namespace EmpTrack.ViewModels.User
         int selectedModeIndex = 0;
         int selectedWorkerTypeIndex = 0;
         int workingTimeSpent, partTimeHourSpent, totalWorkingTime, hourRemaining = 0;
-        bool ifWorkingOnWeekend, ifComplianceViolation  = false;
+        bool ifWorkingOnWeekend, ifComplianceViolation, ifBusy  = false;
 
 
         public EmpProfileViewModel()
         {
             SetupSaveCommand();
         }
-
+		
         private void SetupSaveCommand()
         {
 			SaveButtonCommand = new Command((e) =>
 			{
                 String selectedMode = SupportedModes[selectedModeIndex];
                 String selectedWorkerType = WorketTypes[selectedWorkerTypeIndex];
-                //call post server call to save data here
+                string weekBeginDateString = WeekBeginDate.ToString("yyyy-MM-dd");
+                string plannedLeaveDateRange = PlannedLeaveFrom.ToString("yyyy-MM-dd") + "_" + PlannedLeaveTo.ToString("yyyy-MM-dd");
+				String lunchTimeRange = LunchFrom.ToString() + "-" + LunchTo.ToString();
+				String workingTimeRange = NormalWorkingFrom.ToString() + "-" + NormalWorkingTo.ToString();
+				String emrgencyBreakTimeRange = EmergencyBreakFrom.ToString() + "-" + EmergencyBreakTo.ToString();
 
+				//call post server call to save data here
+				Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add(APIsConstant.Email, Email);
+                parameters.Add(APIsConstant.WorkerName, Name);
+                parameters.Add(APIsConstant.EmployeeType, selectedWorkerType);
+                parameters.Add(APIsConstant.ModeSupported, selectedMode);
+                parameters.Add(APIsConstant.WorkBeginWeek, weekBeginDateString);
+                parameters.Add(APIsConstant.TimeHoursSpent, WorkingTimeSpent);
+                parameters.Add(APIsConstant.PartTimeSpentHour, PartTimeHourSpent);
+                parameters.Add(APIsConstant.TotalWorkingHour, TotalWorkingTime);
+                parameters.Add(APIsConstant.TotalRemaingHour, HourRemaining);
+				parameters.Add(APIsConstant.LunchTime, lunchTimeRange);
+                parameters.Add(APIsConstant.NormalWorkingHour, workingTimeRange);
+                parameters.Add(APIsConstant.EmergencyBreakHour, emrgencyBreakTimeRange);
+                parameters.Add(APIsConstant.IfWorkingWeekend, IfWorkingOnWeekend);
+                parameters.Add(APIsConstant.IfComplianceVoilation, IfComplianceViolation);
+                parameters.Add(APIsConstant.WorkerAuthorization, "test");
+                PostNewEmployeeDetails(parameters);
+               
 			});
+        }
+
+        private async Task PostNewEmployeeDetails(Dictionary<string, object> parameters)
+        {
+            IfBusy = true;
+            var userService = new UserService();
+            EmpResponse empResponse = await userService.SaveEmpDetails(parameters);
+            if (empResponse.Status)
+            {
+				//Employee details successfully added
+                Debug.WriteLine("Emp Id " + empResponse.EmployeeId);
+            }
+            else
+            {
+                //Failed to save data
+                Debug.WriteLine("Error Message " + empResponse.ErrorMessage);
+            }
+            IfBusy = false;
         }
 
 #region generic profile info region
@@ -58,6 +104,22 @@ namespace EmpTrack.ViewModels.User
 				{
 					name = value;
 					OnPropertyChanged("Name");
+				}
+			}
+		}
+        /// <summary>
+        /// control waitingbar while hiting server request 
+        /// </summary>
+        /// <value><c>true</c> if if busy; otherwise, <c>false</c>.</value>
+        public bool IfBusy
+		{
+            get { return ifBusy; }
+			set
+			{
+				if (ifBusy != value)
+				{
+					ifBusy = value;
+					OnPropertyChanged("IfBusy");
 				}
 			}
 		}
@@ -340,11 +402,11 @@ namespace EmpTrack.ViewModels.User
 			String selectedMode = SupportedModes[selectedModeIndex];
 			if (selectedMode.Equals("U.S. 70:8"))
 			{
-				remainingHours = TotalWorkingTime - 70;
+				remainingHours = 70 - TotalWorkingTime;
 			}
 			else
 			{
-				remainingHours = TotalWorkingTime - 60;
+				remainingHours = 60 - TotalWorkingTime;
 			}
 			return remainingHours;
 		}

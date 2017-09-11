@@ -6,7 +6,7 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/waqas/Projects/EmpTrack/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/partial-info.plist</string>
+			<string>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

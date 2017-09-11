@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpTrack.iOS", "iOS\EmpTrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpTrack.Droid", "Droid\EmpTrack.Droid.csproj", "{D8CF275E-297D-42DE-A5D0-D2BAC7D581CD}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Services", "Services\Services.shproj", "{65EE3481-1503-4922-BECC-08395E91CF29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

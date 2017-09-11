@@ -1,17 +1,14 @@
-﻿<Properties StartupConfiguration="{69C80FC4-6CA3-4E55-B096-9FB357ED0608}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/Views/Profile/EmpProfile.xaml">
+﻿<Properties StartupConfiguration="{D8CF275E-297D-42DE-A5D0-D2BAC7D581CD}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/ViewModels/User/EmpProfileViewModel.cs">
     <Files>
-      <File FileName="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" Line="56" Column="40" />
-      <File FileName="EmpTrack/Views/Profile/EmpProfile.xaml" Line="30" Column="58" />
-      <File FileName="../../UVSoft/UFCW/UFCW/ViewModels/Claims/SearchClaimViewModel.cs" Line="176" Column="10" />
-      <File FileName="../../UVSoft/UFCW/UFCW/Views/Pages/Claim/SearchClaimPage.xaml" Line="30" Column="73" />
+      <File FileName="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" Line="52" Column="92" />
+      <File FileName="EmpTrack/Constants/APIsConstant.cs" Line="9" Column="78" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/waqas/Downloads/Xamarin-Custom-Controls-master/src/Xamarin.CustomControls.Accordion/AccordionView.cs" line="67" column="1" />
-      <Breakpoint file="/Users/waqas/Projects/EmpTrack/EmpTrack/ViewModels/User/EmpProfileViewModel.cs" relfile="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" line="36" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
