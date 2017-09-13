@@ -11,7 +11,7 @@
 namespace EmpTrack {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
