@@ -4,9 +4,16 @@
     Title="My Profile"
      BarBackgroundColor="{StaticResource NavBarBackground}"
     xmlns:local="clr-namespace:EmpTrack.Views.Profile"
+            xmlns:local1="clr-namespace:EmpTrack.Views.Usage"
     x:Class="EmpTrack.Views.Profile.MyProfile">
-	<local:TabPage1>
-    </local:TabPage1>
-    <local:TabPage2>
-    </local:TabPage2>
+
+
+    <local:EmpProfile>
+    </local:EmpProfile>
+    <local:EmailAlertTabPage>
+    </local:EmailAlertTabPage>
+    <local1:UsagePage>
+    </local1:UsagePage>
+
+
 </TabbedPage>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,49 +51,7 @@
     <EmbeddedResource Include="Views\Profile\MyProfile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Profile\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Profile\EmpProfile.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Profile\TabPage2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\PrivacyPolicy\PrivacyPolicyPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\PrivacyPolicy\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\PrivacyPolicy\TabPage2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TermsOfUse\TermsOfUsePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TermsOfUse\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TermsOfUse\TabPage2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataUsage\DataUsagePolicyPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataUsage\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataUsage\TabPage2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ContactUs\ContactUsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ContactUs\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ContactUs\TabPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Settings\SettingPage.xaml">
@@ -108,16 +66,7 @@
     <EmbeddedResource Include="Views\Settings\TabPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataUsage\UsagePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\News\NewsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\News\TabPage1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\News\TabPage2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Notifications\NotificationPage.xaml">
@@ -144,6 +93,15 @@
     <Compile Include="Views\AboutUs\TabPage2.xaml.cs">
       <DependentUpon>TabPage2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dashboard\BidsTabPage.xaml.cs">
+      <DependentUpon>BidsTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\DashboardTabPage.xaml.cs">
+      <DependentUpon>DashboardTabPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -153,53 +111,44 @@
     <Compile Include="Views\Menu\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\News\CommunityTabPage.xaml.cs">
+      <DependentUpon>CommunityTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\FeedTabPage.xaml.cs">
+      <DependentUpon>FeedTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\NewsTabPage.xaml.cs">
+      <DependentUpon>NewsTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PolicyMenu\DataUsageTabPage.xaml.cs">
+      <DependentUpon>DataUsageTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PolicyMenu\PolicyMenuPage.xaml.cs">
+      <DependentUpon>PolicyMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PolicyMenu\PrivacyPolicyTabPage.xaml.cs">
+      <DependentUpon>PrivacyPolicyTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PolicyMenu\TermsOfUseTabPage.xaml.cs">
+      <DependentUpon>TermsOfUseTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profile\EmailAlertTabPage.xaml.cs">
+      <DependentUpon>EmailAlertTabPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Profile\MyProfile.xaml.cs">
       <DependentUpon>MyProfile.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Profile\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Profile\EmpProfile.xaml.cs">
       <DependentUpon>EmpProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Profile\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
+    <Compile Include="Views\SendFeedback\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PrivacyPolicy\PrivacyPolicyPage.xaml.cs">
-      <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
+    <Compile Include="Views\SendFeedback\Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PrivacyPolicy\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PrivacyPolicy\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TermsOfUse\TermsOfUsePage.xaml.cs">
-      <DependentUpon>TermsOfUsePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TermsOfUse\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TermsOfUse\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataUsage\DataUsagePolicyPage.xaml.cs">
-      <DependentUpon>DataUsagePolicyPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataUsage\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataUsage\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContactUs\ContactUsPage.xaml.cs">
-      <DependentUpon>ContactUsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContactUs\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContactUs\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
+    <Compile Include="Views\SendFeedback\SendFeedbackPage.xaml.cs">
+      <DependentUpon>SendFeedbackPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Settings\SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
@@ -213,17 +162,8 @@
     <Compile Include="Views\Settings\TabPage2.xaml.cs">
       <DependentUpon>TabPage2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DataUsage\UsagePage.xaml.cs">
-      <DependentUpon>UsagePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\News\NewsPage.xaml.cs">
       <DependentUpon>NewsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\News\TabPage1.xaml.cs">
-      <DependentUpon>TabPage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\News\TabPage2.xaml.cs">
-      <DependentUpon>TabPage2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Notifications\NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>
@@ -231,6 +171,9 @@
     <Compile Include="ViewModels\User\EmpProfileViewModel.cs" />
     <Compile Include="Models\SupportedMode.cs" />
     <Compile Include="Constants\APIsConstant.cs" />
+    <Compile Include="Views\Usage\UsagePage.xaml.cs">
+      <DependentUpon>UsagePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -250,20 +193,94 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="New Folder\" />
-    <Folder Include="Views\" />
-    <Folder Include="Views\AboutUs\" />
-    <Folder Include="Views\Login\" />
-    <Folder Include="Views\Menu\" />
-    <Folder Include="Views\Profile\" />
-    <Folder Include="Views\PrivacyPolicy\" />
-    <Folder Include="Views\TermsOfUse\" />
-    <Folder Include="Views\DataUsage\" />
-    <Folder Include="Views\ContactUs\" />
-    <Folder Include="Views\Settings\" />
-    <Folder Include="Views\News\" />
-    <Folder Include="Views\Notifications\" />
-    <Folder Include="Constants\" />
+    <EmbeddedResource Include="Views\Profile\EmailAlertTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\News\NewsTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\News\FeedTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\News\CommunityTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SendFeedback\SendFeedbackPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SendFeedback\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SendFeedback\Page2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Dashboard\DashboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Usage\UsagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Dashboard\DashboardTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Dashboard\BidsTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PolicyMenu\PolicyMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PolicyMenu\PrivacyPolicyTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PolicyMenu\TermsOfUseTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PolicyMenu\DataUsageTabPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\Services\Services.projitems" Label="Shared" Condition="Exists('..\Services\Services.projitems')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

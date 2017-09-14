@@ -12,11 +12,19 @@
      </ContentPage.Padding>
         <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
-            <ListView  x:Name="listView"  BackgroundColor="{StaticResource HamburgerBackground}" SeparatorVisibility="None">
+            <Label Text="Logged In As : ABC" Margin="15,0,0,30"/>
+            <ListView x:Name="listView"  BackgroundColor="{StaticResource HamburgerBackground}" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Margin="10,0,0,0" Text="{Binding Title}" TextColor="Black" VerticalOptions="FillAndExpand"/>
+                            <Grid Padding="5,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding IconSource}" />
+                                <Label Grid.Column="1" Text="{Binding Title}" VerticalOptions="FillAndExpand"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

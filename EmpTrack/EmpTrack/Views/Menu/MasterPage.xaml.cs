@@ -17,62 +17,68 @@ namespace EmpTrack.Views.Menu
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "My Profile",
+                IconSource = "User.png",
                 TargetType = typeof(Profile.MyProfile)
 			});
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "Employee Profile",
+                IconSource= "User.png",
                 TargetType = typeof(Profile.EmpProfile)
 			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Privacy Policy",
-				TargetType = typeof(PrivacyPolicy.PrivacyPolicyPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Terms Of Use",
-				TargetType = typeof(TermsOfUse.TermsOfUsePage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Data Usage Policy",
-				TargetType = typeof(DataUsage.DataUsagePolicyPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "About Us",
-				TargetType = typeof(AboutUs.AboutUsPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Contact Us",
-				TargetType = typeof(ContactUs.ContactUsPage)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Settings",
-				TargetType = typeof(Settings.SettingPage2)
-			});
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Dashboard",
+                IconSource = "Dashboard.png",
+                TargetType = typeof(Dashboard.DashboardPage)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Policy Menu",
+                IconSource = "Policy.png",
+                TargetType = typeof(PolicyMenu.PolicyMenuPage)
+            });
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "Usage",
-                TargetType = typeof(DataUsage.UsagePage)
+                IconSource= "Usage.png",
+                TargetType = typeof(Usage.UsagePage)
 			});
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "News",
+                IconSource= "News.png",
 				TargetType = typeof(News.NewsPage)
 			});
 			masterPageItems.Add(new MasterPageItem
 			{
 				Title = "Notifications",
+                IconSource= "Notifications.png",
 				TargetType = typeof(Notifications.NotificationPage)
 			});
-			masterPageItems.Add(new MasterPageItem
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "About Us",
+                IconSource= "About.png",
+                TargetType = typeof(AboutUs.AboutUsPage)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Send Feedback",
+                IconSource= "Feedback.png",
+                TargetType = typeof(SendFeedback.SendFeedbackPage)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Settings",
+                IconSource= "Settings.png",
+                TargetType = typeof(Settings.SettingPage2)
+            });
+            masterPageItems.Add(new MasterPageItem
 			{
-				Title = "Logout"
-			});
+				Title = "Logout",
+                IconSource= "Logout.png"
+            });
 
 			listView.ItemsSource = masterPageItems;
         }

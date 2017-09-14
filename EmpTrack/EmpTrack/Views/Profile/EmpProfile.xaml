@@ -12,53 +12,90 @@
                     <Label Font="Bold" FontSize="{DynamicResource HeadingFontSize}" VerticalTextAlignment="Center" TextColor="{ DynamicResource NormalTextColor }" Text="Profile Details"/>
                    <BoxView WidthRequest="1000" HeightRequest="1" BackgroundColor="Gray" />
 
-                    <!-- Name -->
-                    <Label Text="Name"  Margin="0,5,0,0" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black" HorizontalOptions="Start" />
-                    <Entry VerticalOptions="Start" Text="{Binding Name}" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
+                        
+                        <!-- Supported Modes Picker-->
+                        <Label Text="Modes Supported" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                        
+                        <!-- Worker Types Picker -->
+                        <Label Text="Worker Type" Margin="20,0,0,0"  VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                        
+                    </StackLayout>
 
-                    <!-- Email -->
-                    <Label Text="Email" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black" HorizontalOptions="Start"/>
-                    <Entry  VerticalOptions="Start" Text="{Binding Email}" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand"/>
-
-                    <!-- Supported Modes Picker-->
-                    <Label Text="Modes Supported" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                    <Picker Title="Modes Supported"
+                    <StackLayout Orientation="Horizontal">
+                        
+                        <!-- Supported Modes Picker-->
+                        <Picker Title="Modes Supported"
+                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                         SelectedIndex="{Binding SelectedModeIndex}"
                         ItemsSource="{Binding SupportedModes}"/>
 
-                    <!-- Worker Types Picker -->
-                    <Label Text="Worker Type"  VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                    <Picker Title="Worker Type"
+                        <!-- Worker Types Picker -->
+                        <Picker Title="Worker Type"
+                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                         SelectedIndex="{Binding SelectedWorkerTypeIndex}"
                         ItemsSource="{Binding WorketTypes}"/>
-                       
-                  <!-- Service Detail Section-->
-                  <Label Font="Bold"  Margin="0,15,0,0" FontSize="{DynamicResource HeadingFontSize}" VerticalTextAlignment="Center" TextColor="{ DynamicResource NormalTextColor }" Text="Service Details"/>
-                   <BoxView WidthRequest="1000" HeightRequest="1" BackgroundColor="Gray" />
+
+
+                    </StackLayout>
+
 
                     <!-- Week Begin Picker-->
                     <Label Text="Week Begin"   Margin="0,5,0,0" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="Start" TextColor="Black"/>
-                    <DatePicker VerticalOptions="Start"  
-                                Date="{Binding WeekBeginDate}" 
-                                 HorizontalOptions="FillAndExpand" x:Name="WorkBeginDateTime">
+                    <DatePicker
+                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"  
+                                Date="{Binding WeekBeginDate}"  x:Name="WorkBeginDateTime">
                         <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
                     </DatePicker>
+
+
+                    <!-- Service Detail Section-->
+                    <Label Font="Bold"  Margin="0,15,0,0" FontSize="{DynamicResource HeadingFontSize}" VerticalTextAlignment="Center" TextColor="{ DynamicResource NormalTextColor }" Text="Service Details"/>
+                    <BoxView WidthRequest="1000" HeightRequest="1" BackgroundColor="Gray" />
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <!-- Working Time Spent -->
+                        <Label Text="Working Time Spent" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+
+                        <!-- Part Time Spent -->
+                        <Label Text="Part Time Hours Spent" Margin="20,0,0,0" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <!-- Working Time Spent -->
+                        <Entry Text="{Binding WorkingTimeSpent}" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+
+                        <!-- Part Time Spent -->
+                        <Entry Text="{Binding PartTimeHourSpent}" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <!-- Total Working time  -->
+                        <Label Text="Total Working Time" VerticalOptions="Start" HorizontalOptions="FillAndExpand" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
                     
-                    <!-- Working Time Spent -->
-                    <Label Text="Working Time Spent" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="Start" TextColor="Black"/>
-                    <Entry Text="{Binding WorkingTimeSpent}" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+                        <!-- Remaining Hours -->
+                        <Label Text="Hours Remaining" Margin="-20,0,0,0" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                    
+                    </StackLayout>
 
-                    <!-- Part Time Spent -->
-                    <Label Text="Part Time Hours Spent" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                    <Entry Text="{Binding PartTimeHourSpent}" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
 
-                    <!-- Total Working time  -->
-                    <Label Text="Total Working Time:" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
-                    <Entry Text="{Binding TotalWorkingTime}" IsEnabled="false" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+                    <StackLayout Orientation="Horizontal">
 
-                    <!-- Remaining Hours -->
-                    <Label Text="Hours Remaining" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="Start" TextColor="Black"/>
-                    <Entry Text = "{Binding HourRemaining}" IsEnabled="false" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+                        <!-- Total Working time  -->
+                        <Entry Text="{Binding TotalWorkingTime}" IsEnabled="false" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+
+                        <!-- Remaining Hours -->
+                        <Entry Text = "{Binding HourRemaining}" IsEnabled="false" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+
+                    </StackLayout>
+
+
 
                     <!-- Lunch Time Range-->
                     <Label Text="Lunch Time" FontSize="{StaticResource NormalFontSize}" VerticalOptions="Start" HorizontalOptions="Start" TextColor="Black"/>
@@ -117,6 +154,14 @@
                     <ActivityIndicator IsVisible="{Binding IfBusy}" IsRunning="{Binding IfBusy}" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
                     <local:LoginButton  Command="{Binding SaveButtonCommand}" Text="Save" HeightRequest="40" VerticalOptions="Start" WidthRequest="100"
                     Margin="0,10,0,10" HorizontalOptions="EndAndExpand" Style="{StaticResource ButtonStyle}" />
+
+                    <Picker Title="Modes Supported" Margin="0,0,0,20">
+                        <Picker.Items>
+                            <x:String>Approved</x:String>
+                            <x:String>Rejected</x:String>
+                            <x:String>Pending</x:String>
+                        </Picker.Items>
+                    </Picker>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

@@ -5,8 +5,12 @@
      BarBackgroundColor="{StaticResource NavBarBackground}"
     xmlns:local="clr-namespace:EmpTrack.Views.News"
     x:Class="EmpTrack.Views.News.NewsPage">
-	 <local:TabPage1>
-    </local:TabPage1>
-    <local:TabPage2>
-    </local:TabPage2>
+
+    <local:NewsTabPage>
+    </local:NewsTabPage>
+    <local:FeedTabPage>
+    </local:FeedTabPage>
+    <local:CommunityTabPage>
+    </local:CommunityTabPage>
+
 </TabbedPage>
