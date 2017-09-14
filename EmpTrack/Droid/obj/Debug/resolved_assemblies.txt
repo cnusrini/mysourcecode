@@ -1,6 +1,10 @@
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/EmpTrack.Droid.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/EmpTrack.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/FormsViewGroup.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Plugin.Settings.Abstractions.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Plugin.Settings.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Xamarin.Android.Support.Animated.Vector.Drawable.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Xamarin.Android.Support.Design.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Xamarin.Android.Support.v4.dll
@@ -49,6 +53,8 @@
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Text.Encoding.Extensions.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Microsoft.CSharp.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.ComponentModel.dll
-/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Collections.Concurrent.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Net.Primitives.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Runtime.InteropServices.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Runtime.Serialization.Json.dll
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/System.Collections.Concurrent.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/android/assets/Mono.Security.dll

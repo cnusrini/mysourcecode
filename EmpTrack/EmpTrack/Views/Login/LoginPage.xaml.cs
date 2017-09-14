@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using EmpTrack.ViewModels.User;
 using Xamarin.Forms;
+using EmpTrack.Interfaces;
+using EmpTrack.Constants;
 
 namespace EmpTrack.Views.Login
 {
@@ -12,7 +14,8 @@ namespace EmpTrack.Views.Login
         {
             InitializeComponent();
 			loginViewModel = new LoginViewModel();
-			BindingContext = loginViewModel;
+            BindingContext = loginViewModel;
         }
+        
     }
 }

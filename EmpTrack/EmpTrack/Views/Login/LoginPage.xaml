@@ -4,9 +4,15 @@
     xmlns:local="clr-namespace:EmpTrack.Customization"
     x:Class="EmpTrack.Views.Login.LoginPage">
 	<ContentPage.Content>
-        <StackLayout>
-            <local:LoginButton Text="Login" VerticalOptions="CenterAndExpand" 
-            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding LoginCommand}" 
+        <StackLayout Orientation ="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <!--Domain 1 -->
+            <local:LoginButton Text="Domain 1" VerticalOptions="Center" 
+            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding Domain1Command}" 
+             WidthRequest="100"/>
+
+            <!--Domain 2 -->
+            <local:LoginButton Text="Domain 2" VerticalOptions="Center" 
+            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding Domain2Command}" 
              WidthRequest="100"/>
         </StackLayout>
     </ContentPage.Content>

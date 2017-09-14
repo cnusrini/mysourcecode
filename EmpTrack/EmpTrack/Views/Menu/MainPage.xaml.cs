@@ -1,29 +1,47 @@
-﻿using System;
+﻿using EmpTrack.Models;
+using System;
 using System.Collections.Generic;
-using EmpTrack.Models;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EmpTrack.Views.Profile;
 
 namespace EmpTrack.Views.Menu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
+        MasterPage masterPage;
         public MainPage()
         {
             InitializeComponent();
+            masterPage = new MasterPage();
+            Master = masterPage;
+            if (Helpers.Settings.DomainType == 1)
+            {
+                Detail = new NavigationPage(new MyProfile()); 
+            }
+            else
+            {
+                Detail = new NavigationPage(new EmpProfile());
+            }
+
+
             masterPage.ListView.ItemSelected += OnItemSelected;
         }
-		void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-		{
-			var item = e.SelectedItem as MasterPageItem;
-			if (item != null)
-			{
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as MasterPageItem;
+            if (item != null)
+            {
                 if (!item.Title.Equals("Logout"))
                 {
-					Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-					masterPage.ListView.SelectedItem = null;
-					IsPresented = false;
+                    Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                    masterPage.ListView.SelectedItem = null;
+                    IsPresented = false;
                 }
                 else
                 {
@@ -31,8 +49,8 @@ namespace EmpTrack.Views.Menu
                     App.Current.MainPage = new Views.Login.LoginPage();
 
                 }
-				
-			}
-		}
+
+            }
+        }
     }
 }

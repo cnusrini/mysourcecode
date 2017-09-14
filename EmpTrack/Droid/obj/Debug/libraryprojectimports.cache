@@ -2,16 +2,25 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Droid/obj/Debug/__library_projects__/Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

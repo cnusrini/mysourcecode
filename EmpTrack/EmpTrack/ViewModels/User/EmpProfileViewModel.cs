@@ -56,8 +56,8 @@ namespace EmpTrack.ViewModels.User
 
 				//call post server call to save data here
 				Dictionary<string, object> parameters = new Dictionary<string, object>();
-                parameters.Add(APIsConstant.Email, Email);
-                parameters.Add(APIsConstant.WorkerName, Name);
+                parameters.Add(APIsConstant.Email, Helpers.Settings.Email);
+                parameters.Add(APIsConstant.WorkerName, Helpers.Settings.UserName);
                 parameters.Add(APIsConstant.EmployeeType, selectedWorkerType);
                 parameters.Add(APIsConstant.ModeSupported, selectedMode);
                 parameters.Add(APIsConstant.WorkBeginWeek, weekBeginDateString);
