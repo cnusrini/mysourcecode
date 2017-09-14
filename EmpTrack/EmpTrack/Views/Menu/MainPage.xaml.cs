@@ -7,15 +7,29 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EmpTrack.Views.Profile;
 
 namespace EmpTrack.Views.Menu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
+        MasterPage masterPage;
         public MainPage()
         {
             InitializeComponent();
+            masterPage = new MasterPage();
+            Master = masterPage;
+            if (Helpers.Settings.DomainType == 1)
+            {
+                Detail = new NavigationPage(new MyProfile()); 
+            }
+            else
+            {
+                Detail = new NavigationPage(new EmpProfile());
+            }
+
+
             masterPage.ListView.ItemSelected += OnItemSelected;
         }
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

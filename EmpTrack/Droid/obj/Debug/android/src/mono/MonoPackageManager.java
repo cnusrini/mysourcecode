@@ -103,6 +103,8 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
 		"Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+		"Plugin.Settings.Abstractions.dll",
+		"Plugin.Settings.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",

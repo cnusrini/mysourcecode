@@ -23,7 +23,15 @@
 	-r \
 	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/bin/Debug/EmpTrack.dll \
 	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Microsoft.IdentityModel.Clients.ActiveDirectory.3.5.207081303-alpha/lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Microsoft.IdentityModel.Clients.ActiveDirectory.3.5.207081303-alpha/lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -316,6 +324,14 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
 	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/bin/Debug/EmpTrack.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Microsoft.IdentityModel.Clients.ActiveDirectory.3.5.207081303-alpha/lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Microsoft.IdentityModel.Clients.ActiveDirectory.3.5.207081303-alpha/lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll \
+	-r \
+	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.dll \
 	-r \
 	/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/packages/Xamarin.Forms.2.3.4.270/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \

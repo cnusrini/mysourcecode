@@ -155,7 +155,7 @@
                     <local:LoginButton  Command="{Binding SaveButtonCommand}" Text="Save" HeightRequest="40" VerticalOptions="Start" WidthRequest="100"
                     Margin="0,10,0,10" HorizontalOptions="EndAndExpand" Style="{StaticResource ButtonStyle}" />
 
-                    <Picker Title="Modes Supported" Margin="0,0,0,20">
+                    <Picker Title="Manager Approval" Margin="0,0,0,20">
                         <Picker.Items>
                             <x:String>Approved</x:String>
                             <x:String>Rejected</x:String>
