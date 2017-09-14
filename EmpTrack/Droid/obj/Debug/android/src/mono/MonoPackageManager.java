@@ -101,6 +101,8 @@ class MonoPackageManager_Resources {
 		"EmpTrack.Droid.dll",
 		"EmpTrack.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+		"Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",

@@ -26,6 +26,9 @@ namespace EmpTrack.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.Id.agentWebView = global::EmpTrack.Droid.Resource.Id.agentWebView;
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.Layout.WebAuthenticationBroker = global::EmpTrack.Droid.Resource.Layout.WebAuthenticationBroker;
+			global::Microsoft.IdentityModel.Clients.ActiveDirectory.Resource.String.ApplicationName = global::EmpTrack.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::EmpTrack.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2297,6 +2300,9 @@ namespace EmpTrack.Droid
 			// aapt resource value: 0x7f07003d
 			public const int activity_chooser_view_content = 2131165245;
 			
+			// aapt resource value: 0x7f07009a
+			public const int agentWebView = 2131165338;
+			
 			// aapt resource value: 0x7f070049
 			public const int alertTitle = 2131165257;
 			
@@ -2957,6 +2963,9 @@ namespace EmpTrack.Droid
 			// aapt resource value: 0x7f030038
 			public const int Toolbar = 2130903096;
 			
+			// aapt resource value: 0x7f030039
+			public const int WebAuthenticationBroker = 2130903097;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2969,6 +2978,9 @@ namespace EmpTrack.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f080026
+			public const int ApplicationName = 2131230758;
 			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;

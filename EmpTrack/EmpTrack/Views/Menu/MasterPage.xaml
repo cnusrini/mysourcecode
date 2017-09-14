@@ -1,34 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Master Page"
-    Icon="hamburger.png"
-    BackgroundColor="{StaticResource HamburgerBackground}"
-    x:Class="EmpTrack.Views.Menu.MasterPage">
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0, 60, 0, 0"
-        Android="0, 60, 0, 0"/>
-     </ContentPage.Padding>
-        <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
-            <Label Text="Logged In As : ABC" Margin="15,0,0,30"/>
-            <ListView x:Name="listView"  BackgroundColor="{StaticResource HamburgerBackground}" SeparatorVisibility="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="5,10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image Source="{Binding IconSource}" />
-                                <Label Grid.Column="1" Text="{Binding Title}" VerticalOptions="FillAndExpand"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpTrack.Views.Menu.MasterPage"
+             Title="master page">
+    <StackLayout>
+        <ListView x:Name="listView" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" VerticalOptions="FillAndExpand" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

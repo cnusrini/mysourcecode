@@ -25,7 +25,26 @@ namespace EmpTrack.Constants
 		public const string IfWorkingWeekend = "ifWorkingWeekend";
 		public const string IfComplianceVoilation = "ifComplianceVoilation";
         public const string WorkerAuthorization = "workerAuthorization";
-		#endregion
-	}
+        #endregion
+
+        #region
+
+
+
+        public static string clientIdForDomain1 = "5f487de8-7bbb-4ba0-bdf4-b93c32b1684d";   // application id
+        public static string authorityForDomain1 = "https://login.windows.net/common";
+        public static string returnUriForDomain1 = "http://ww";
+        public const string graphResourceUriForDomain1 = "https://graph.windows.net";
+        public static string graphApiVersionForDomain1 = "2013-11-08";
+
+        
+        public static string clientIdForDomain2 = "ca840096-e501-4452-b2f1-d5a525c0c396";   // application id
+        public static string authorityForDomain2 = "https://login.windows.net/common";
+        public static string returnUriForDomain2 = "http://cloudtxtruck";
+        public const string graphResourceUriForDomain2 = "https://graph.windows.net";
+        public static string graphApiVersionForDomain2 = "2013-11-08";
+        #endregion
+
+    }
 }
  
