@@ -151,3 +151,4 @@ D:/Project/EmpTracking/mysourcecode/EmpTrack/EmpTrack/bin/Debug/Newtonsoft.Json.
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/obj/Debug/EmpTrack.Views.Menu.MasterPage.xaml.g.cs
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/obj/Debug/EmpTrack.dll
 /Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/obj/Debug/EmpTrack.pdb
+/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/obj/Debug/EmpTrack.csprojResolveAssemblyReference.cache
