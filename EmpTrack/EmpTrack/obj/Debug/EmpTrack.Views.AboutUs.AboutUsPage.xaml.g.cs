@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.AboutUs {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/EmpTrack/Views/AboutUs/Abou" +
-        "tUsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\AboutUs\\AboutUsPage.x" +
+        "aml")]
     public partial class AboutUsPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

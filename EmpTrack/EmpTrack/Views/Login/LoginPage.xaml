@@ -5,15 +5,11 @@
     x:Class="EmpTrack.Views.Login.LoginPage">
 	<ContentPage.Content>
         <StackLayout Orientation ="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-            <!--Domain 1 -->
-            <local:LoginButton Text="Domain 1" VerticalOptions="Center" 
-            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding Domain1Command}" 
-             WidthRequest="100"/>
 
-            <!--Domain 2 -->
-            <local:LoginButton Text="Domain 2" VerticalOptions="Center" 
-            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding Domain2Command}" 
-             WidthRequest="100"/>
+            <!--Client -->
+            <local:LoginButton Text="Client" VerticalOptions="Center" 
+            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" Command="{Binding ClientCommand}" 
+             WidthRequest="110"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

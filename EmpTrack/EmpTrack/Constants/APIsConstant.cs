@@ -30,9 +30,9 @@ namespace EmpTrack.Constants
 
 
 
-        public static string clientIdForDomain1 = " 6e32e2d5-92f7-4959-895f-d7605adf51bc\n";   // application id
+        public static string clientIdForDomain1 = "5f487de8-7bbb-4ba0-bdf4-b93c32b1684d";   // application id
         public static string authorityForDomain1 = "https://login.windows.net/common";
-        public static string returnUriForDomain1 = "hhttp://empAzureAD";
+        public static string returnUriForDomain1 = "http://ww";
         public const string graphResourceUriForDomain1 = "https://graph.windows.net";
         public static string graphApiVersionForDomain1 = "2013-11-08";
 

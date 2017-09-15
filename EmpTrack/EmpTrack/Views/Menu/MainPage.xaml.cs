@@ -46,6 +46,8 @@ namespace EmpTrack.Views.Menu
                 else
                 {
                     //Perform logout here
+                    Helpers.Settings.Email = String.Empty;
+                    Helpers.Settings.UserName = String.Empty;
                     App.Current.MainPage = new Views.Login.LoginPage();
 
                 }

@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using EmpTrack.Views.Login;
 
 namespace EmpTrack.Droid
 {
@@ -36,7 +37,7 @@ namespace EmpTrack.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
+            Xamarin.Forms.Application.Current.MainPage = new LoginPage();
         }
     }
 }
