@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Services.Models;
+using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
-using Services.Models;
 
-namespace Services.User
+namespace Services.NetworkServices.User
 {
     public interface IUserService
     {
-		Task<EmpResponse> SaveEmpDetails(Dictionary<string, object> parameters); //Post new employee details on the server
-	}
+        Task<EmpResponse> SaveEmpDetails(Dictionary<string, object> parameters); //Post new employee details on the server
+    }
 }

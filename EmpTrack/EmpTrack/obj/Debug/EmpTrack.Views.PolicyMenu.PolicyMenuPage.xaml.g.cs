@@ -11,8 +11,7 @@
 namespace EmpTrack.Views.PolicyMenu {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\PolicyMenu\\PolicyMenu" +
-        "Page.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/Desktop/EmpTrack/EmpTrack/Views/PolicyMenu/PolicyMenuPage.xaml")]
     public partial class PolicyMenuPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace EmpTrack.Views.Dashboard
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BidsTabPage : ContentPage
-	{
-		public BidsTabPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class BidsTabPage : ContentPage
+    {
+        public BidsTabPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

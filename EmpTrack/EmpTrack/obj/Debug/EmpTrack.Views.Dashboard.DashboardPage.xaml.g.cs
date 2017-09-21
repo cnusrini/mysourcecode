@@ -11,8 +11,7 @@
 namespace EmpTrack.Views.Dashboard {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\Dashboard\\DashboardPa" +
-        "ge.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/Desktop/EmpTrack/EmpTrack/Views/Dashboard/DashboardPage.xaml")]
     public partial class DashboardPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

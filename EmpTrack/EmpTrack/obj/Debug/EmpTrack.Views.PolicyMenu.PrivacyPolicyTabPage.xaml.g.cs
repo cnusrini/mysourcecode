@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.PolicyMenu {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\PolicyMenu\\PrivacyPol" +
-        "icyTabPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/Desktop/EmpTrack/EmpTrack/Views/PolicyMenu/PrivacyPolicyTabPage.xaml" +
+        "")]
     public partial class PrivacyPolicyTabPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

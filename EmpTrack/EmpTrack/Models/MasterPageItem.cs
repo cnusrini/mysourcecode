@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpTrack.Models
 {
-    public class MasterPageItem
+    class MasterPageItem
     {
         public string Title { get; set; }
         public string IconSource { get; set; }

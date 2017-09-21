@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Employee Profile"
-     xmlns:local="clr-namespace:EmpTrack.Customization"
-    x:Class="EmpTrack.Views.Profile.EmpProfile">
-	<ContentPage.Content>
-         <ScrollView>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpTrack.Views.Profile.EmpProfile"
+             Title="Employee Profile"
+             xmlns:local="clr-namespace:EmpTrack.Customizations">
+    <ContentPage.Content>
+        <ScrollView>
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="10,10,10,0">
                 <StackLayout>
-                <!--Profile Detail Section -->
+                    <!--Profile Detail Section -->
                     <Label Font="Bold" FontSize="{DynamicResource HeadingFontSize}" VerticalTextAlignment="Center" TextColor="{ DynamicResource NormalTextColor }" Text="Profile Details"/>
-                   <BoxView WidthRequest="1000" HeightRequest="1" BackgroundColor="Gray" />
+                    <BoxView WidthRequest="1000" HeightRequest="1" BackgroundColor="Gray" />
 
                     <StackLayout Orientation="Horizontal">
-                        
+
                         <!-- Supported Modes Picker-->
                         <Label Text="Modes Supported" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                        
+
                         <!-- Worker Types Picker -->
                         <Label Text="Worker Type" Margin="20,0,0,0"  VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                        
+
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        
+
                         <!-- Supported Modes Picker-->
                         <Picker Title="Modes Supported"
                         VerticalOptions="Start" HorizontalOptions="FillAndExpand"
@@ -78,10 +78,10 @@
 
                         <!-- Total Working time  -->
                         <Label Text="Total Working Time" VerticalOptions="Start" HorizontalOptions="FillAndExpand" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
-                    
+
                         <!-- Remaining Hours -->
                         <Label Text="Hours Remaining" Margin="-20,0,0,0" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                    
+
                     </StackLayout>
 
 
@@ -104,13 +104,13 @@
                         <TimePicker Time ="{Binding LunchTo}" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
 
-                     <!-- Normal Working Time Range-->
+                    <!-- Normal Working Time Range-->
                     <Label Text="Normal Working Hours" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="Start" TextColor="Black"/>
                     <StackLayout Orientation="Horizontal">
                         <TimePicker Time ="{Binding NormalWorkingFrom}" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
                         <TimePicker Time ="{Binding NormalWorkingTo}" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
-                    
+
                     <!-- Emergency break Time Range-->
                     <Label Text="Any Emergency Break Hours" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
                     <StackLayout Orientation="Horizontal">
@@ -118,20 +118,20 @@
                         <TimePicker Time ="{Binding EmergencyBreakTo}" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
 
-                     <!-- Planned Leave Date Range-->
+                    <!-- Planned Leave Date Range-->
                     <Label Text="Planned Leave" VerticalOptions="Start" HorizontalOptions="Start"  FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
-                   
+
                     <StackLayout Orientation="Horizontal">
                         <DatePicker VerticalOptions="Start"  
                             Date="{Binding PlannedLeaveFrom}" 
                             HorizontalOptions="FillAndExpand" x:Name="LeaveFrom">
                             <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
                         </DatePicker>
-                        
-                         <DatePicker VerticalOptions="Start"  
+
+                        <DatePicker VerticalOptions="Start"  
                              Date="{Binding PlannedLeaveTo}" 
                              HorizontalOptions="FillAndExpand" x:Name="LeaveTo">
-                             <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+                            <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
                         </DatePicker>
                     </StackLayout>
 
@@ -140,13 +140,13 @@
                         <Label Text="Working On Weekends?" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
                         <Switch IsToggled="{Binding IfWorkingOnWeekend}"  VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>
                     </StackLayout>
-                    
+
                     <!-- Any Compliance Violation Switch condition -->
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Any Compliance Violation?" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
                         <Switch IsToggled="{Binding IfComplianceViolation}"  VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>
                     </StackLayout>
-                    
+
                     <Label Text="Worker Authorization" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
                     <Entry  VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
 
@@ -165,5 +165,5 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

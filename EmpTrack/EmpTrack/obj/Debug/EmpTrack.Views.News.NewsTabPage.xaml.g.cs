@@ -11,8 +11,7 @@
 namespace EmpTrack.Views.News {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\News\\NewsTabPage.xaml" +
-        "")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/Desktop/EmpTrack/EmpTrack/Views/News/NewsTabPage.xaml")]
     public partial class NewsTabPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

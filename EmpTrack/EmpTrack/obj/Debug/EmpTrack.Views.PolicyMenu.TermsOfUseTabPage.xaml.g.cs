@@ -11,8 +11,7 @@
 namespace EmpTrack.Views.PolicyMenu {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\PolicyMenu\\TermsOfUse" +
-        "TabPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/waqas/Desktop/EmpTrack/EmpTrack/Views/PolicyMenu/TermsOfUseTabPage.xaml")]
     public partial class TermsOfUseTabPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

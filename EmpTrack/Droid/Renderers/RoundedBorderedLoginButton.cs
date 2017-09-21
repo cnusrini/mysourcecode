@@ -11,21 +11,21 @@ using Android.Views;
 using Android.Widget;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
-using EmpTrack.Customization;
 using EmpTrack.Droid.Renderers;
+using EmpTrack.Customizations;
 
 [assembly: ExportRenderer(typeof(LoginButton), typeof(RoundedBorderedLoginButton))]
 namespace EmpTrack.Droid.Renderers
 {
-	class RoundedBorderedLoginButton : ButtonRenderer
-	{
-		protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
-		{
-			base.OnElementChanged(e);
-			if (Control != null)
-			{
-				Control.SetBackgroundResource(Resource.Drawable.LoginRoundedBorderedButton);
-			}
-		}
-	}
+    class RoundedBorderedLoginButton : ButtonRenderer
+    {
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
+        {
+            base.OnElementChanged(e);
+            if (Control != null)
+            {
+                Control.SetBackgroundResource(Resource.Drawable.LoginRoundedBorderedButton);
+            }
+        }
+    }
 }

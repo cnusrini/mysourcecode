@@ -1,4 +1,5 @@
 ﻿using EmpTrack.Models;
+using EmpTrack.Views.Profile;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using EmpTrack.Views.Profile;
 
 namespace EmpTrack.Views.Menu
 {
@@ -22,7 +22,7 @@ namespace EmpTrack.Views.Menu
             Master = masterPage;
             if (Helpers.Settings.DomainType == 1)
             {
-                Detail = new NavigationPage(new MyProfile()); 
+                Detail = new NavigationPage(new MyProfile());
             }
             else
             {

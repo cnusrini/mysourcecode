@@ -1,14 +1,25 @@
-﻿using Xamarin.Forms;
+﻿using EmpTrack.Constants;
+using Microsoft.Identity.Client;
+using Xamarin.Forms;
 
 namespace EmpTrack
 {
     public partial class App : Application
     {
+        public static PublicClientApplication PCA1 = null;
+        public static PublicClientApplication PCA2 = null;
+        public static string[] Scopes = { "User.Read" };
+        public static string Username = string.Empty;
+
+        public static UIParent UiParent = null;
+
+
         public App()
         {
             InitializeComponent();
-            MainPage = new Views.Login.LoginPage();
-           // MainPage = new NavigationPage(new Views.Login.LoginPage());
+            PCA1 = new PublicClientApplication(APIsConstant.ClientIDForDomain1);
+            PCA2 = new PublicClientApplication(APIsConstant.ClientIDForDomain2);
+            MainPage = new NavigationPage(new Views.Login.LoginPage());
         }
 
         protected override void OnStart()

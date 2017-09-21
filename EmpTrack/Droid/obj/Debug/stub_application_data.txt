@@ -1,2 +1,2 @@
 android.app.Application
-com.uvsoft.emptrack
+com.uvsoft.EmpTrack

@@ -1,14 +1,13 @@
-﻿using System;
+﻿using EmpTrack.Constants;
+using Newtonsoft.Json;
+using Services.Models;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using EmpTrack.Constants;
-using Newtonsoft.Json;
-using Services.Models;
-using Services.NetworkServices;
 
-namespace Services.User
+namespace Services.NetworkServices.User
 {
     public class UserService : BaseService, IUserService
     {
@@ -19,11 +18,11 @@ namespace Services.User
         /// <param name="parameters">Parameters.</param>
         public async Task<EmpResponse> SaveEmpDetails(Dictionary<string, object> parameters)
         {
-			var content = new StringContent(JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json");
             HttpResponseMessage responseJson = await client.PostAsync(APIsConstant.SaveEmpDetailAPI, content);
-			var json = await responseJson.Content.ReadAsStringAsync();
+            var json = await responseJson.Content.ReadAsStringAsync();
             var empResponse = JsonConvert.DeserializeObject<EmpResponse>(json);
-			return empResponse;
+            return empResponse;
         }
     }
 }

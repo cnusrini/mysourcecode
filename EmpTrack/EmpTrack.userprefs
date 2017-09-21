@@ -1,20 +1,21 @@
-﻿<Properties StartupConfiguration="{69C80FC4-6CA3-4E55-B096-9FB357ED0608}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../UFCW/UFCW.iOS/AppDelegate.cs">
+﻿<Properties StartupConfiguration="{681340CB-C033-4828-9201-40D0D507DA9A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/ViewModels/User/EmpProfileViewModel.cs">
     <Files>
-      <File FileName="../../../UFCW/UFCW/Helpers/Settings.cs" Line="2" Column="1" />
-      <File FileName="../../../UFCW/UFCW.iOS/AppDelegate.cs" Line="25" Column="1" />
+      <File FileName="EmpTrack/App.xaml.cs" Line="21" Column="72" />
+      <File FileName="EmpTrack/ViewModels/User/EmpProfileViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/waqas/Downloads/Xamarin-Custom-Controls-master/src/Xamarin.CustomControls.Accordion/AccordionView.cs" line="67" column="1" />
+      <Breakpoint file="/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Services/NetworkServices/User/UserService.cs" relfile="Services/NetworkServices/User/UserService.cs" line="24" column="1" />
+      <Breakpoint file="/Users/waqas/UVSoft/Emp-Xamarin/mysourcecode/EmpTrack/Services/NetworkServices/User/UserService.cs" relfile="Services/NetworkServices/User/UserService.cs" line="21" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../UVSoft/MallSage-Xamarin/MallSage/Droid/views/fragments/HomeFragment.cs" line="299" offsetX="436" offsetY="4470" expression="FeaturedViewAdapter.Count" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.EmpTrack.Droid PreferredExecutionTarget="Android.Nexus_4_API_23" />
-  <MonoDevelop.Ide.ItemProperties.EmpTrack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.317F97E1-5E1C-42B5-9D0E-8A3C48922508" />
+  <MonoDevelop.Ide.ItemProperties.EmpTrack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.317F97E1-5E1C-42B5-9D0E-8A3C48922508">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.EmpTrack.iOS>
   <MultiItemStartupConfigurations />
 </Properties>

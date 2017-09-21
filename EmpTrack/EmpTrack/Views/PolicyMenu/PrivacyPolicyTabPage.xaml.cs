@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace EmpTrack.Views.PolicyMenu
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PrivacyPolicyTabPage : ContentPage
-	{
-		public PrivacyPolicyTabPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PrivacyPolicyTabPage : ContentPage
+    {
+        public PrivacyPolicyTabPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

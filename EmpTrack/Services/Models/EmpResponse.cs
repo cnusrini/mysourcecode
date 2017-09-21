@@ -1,9 +1,10 @@
 ﻿using System;
-using Services.NetworkServices;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Services.Models
 {
-    public class EmpResponse:BaseServerResponse
+    public class EmpResponse : BaseServerResponse
     {
         public String EmployeeId { get; set; }
     }

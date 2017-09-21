@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>3.4_WQVGA_API_19</SelectedDevice>
     <DefaultDevice>3.4_WQVGA_API_19</DefaultDevice>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>

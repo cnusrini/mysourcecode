@@ -7,8 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Microsoft.IdentityModel.Clients.ActiveDirectory;
-using EmpTrack.Views.Login;
+using Microsoft.Identity.Client;
 
 namespace EmpTrack.Droid
 {
@@ -21,23 +20,21 @@ namespace EmpTrack.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+
+            App.PCA1.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
+			App.PCA2.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
+
+            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
         }
-        //protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        //{
-        //    base.OnActivityResult(requestCode, resultCode, data);
-        //    AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode,
-        //        data);
-        //}
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            Xamarin.Forms.Application.Current.MainPage = new LoginPage();
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
         }
     }
 }

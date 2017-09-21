@@ -16,12 +16,8 @@ namespace EmpTrack.Views.Menu {
     public partial class MainPage : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::EmpTrack.Views.Menu.MasterPage masterPage;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            masterPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::EmpTrack.Views.Menu.MasterPage>(this, "masterPage");
         }
     }
 }

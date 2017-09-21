@@ -1,49 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace EmpTrack.Constants
 {
-    public class APIsConstant
+    class APIsConstant
     {
-        public static String BaseURL = "http://apidocapp.azurewebsites.net/";
-        #region  web apis 
-        public static String SaveEmpDetailAPI = "api/employee/request/profile";
-		#endregion
+        //public static String BaseURL = "http://apidocapp.azurewebsites.net/";
+		public static String BaseURL = "http://integratedmobile.azurewebsites.net/";
+		#region  web apis 
+		public static String SaveEmpDetailAPI = "api/employee/request/profile";
+        #endregion
 
-		#region Fields Constatns
-		public const string Email = "email";
-		public const string ModeSupported = "modeSupported";
-		public const string EmployeeType = "employeeType";
-		public const string WorkerName = "workerName";
-		public const string WorkBeginWeek = "workBeginWeek";
-		public const string TimeHoursSpent = "timeHoursSpent";
-		public const string PartTimeSpentHour = "partTimeSpentHour";
-		public const string TotalWorkingHour = "totalWorkingHour";
-		public const string TotalRemaingHour = "totalRemaingHour";
-		public const string LunchTime = "lunchTime";
-		public const string NormalWorkingHour = "normalWorkingHour";
-		public const string EmergencyBreakHour = "emergencyBreakHour";
-		public const string IfWorkingWeekend = "ifWorkingWeekend";
-		public const string IfComplianceVoilation = "ifComplianceVoilation";
+        #region Fields Constatns
+        public const string Email = "email";
+        public const string ModeSupported = "modeSupported";
+        public const string EmployeeType = "employeeType";
+        public const string WorkerName = "workerName";
+        public const string WorkBeginWeek = "workBeginWeek";
+        public const string TimeHoursSpent = "timeHoursSpent";
+        public const string PartTimeSpentHour = "partTimeSpentHour";
+        public const string TotalWorkingHour = "totalWorkingHour";
+        public const string TotalRemaingHour = "totalRemaingHour";
+        public const string LunchTime = "lunchTime";
+        public const string NormalWorkingHour = "normalWorkingHour";
+        public const string EmergencyBreakHour = "emergencyBreakHour";
+        public const string IfWorkingWeekend = "ifWorkingWeekend";
+        public const string IfComplianceVoilation = "ifComplianceVoilation";
         public const string WorkerAuthorization = "workerAuthorization";
         #endregion
 
         #region
-
-
-
-        public static string clientIdForDomain1 = "5f487de8-7bbb-4ba0-bdf4-b93c32b1684d";   // application id
-        public static string authorityForDomain1 = "https://login.windows.net/common";
-        public static string returnUriForDomain1 = "http://ww";
-        public const string graphResourceUriForDomain1 = "https://graph.windows.net";
-        public static string graphApiVersionForDomain1 = "2013-11-08";
-
+        public static string ClientIDForDomain1 = "5df5d1a2-6581-41d2-87ec-52dc48f14461";
+        public static string ClientIDForDomain2 = "ee6b1ba3-99b1-4d62-9ef9-833c8c5b31fb";
         
-        public static string clientIdForDomain2 = "ca840096-e501-4452-b2f1-d5a525c0c396";   // application id
-        public static string authorityForDomain2 = "https://login.windows.net/common";
-        public static string returnUriForDomain2 = "http://cloudtxtruck";
-        public const string graphResourceUriForDomain2 = "https://graph.windows.net";
-        public static string graphApiVersionForDomain2 = "2013-11-08";
         #endregion
-
     }
 }
- 

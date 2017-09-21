@@ -1,4 +1,4 @@
-﻿// Helpers/Settings.cs
+// Helpers/Settings.cs
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 
@@ -18,19 +18,20 @@ namespace EmpTrack.Helpers
 				return CrossSettings.Current;
 			}
 		}
-		#region Setting Constants
 
-		private const string SettingsKey = "settings_key";
-		private static readonly string SettingsDefault = string.Empty;
+        #region Setting Constants
 
-		private const string NameKey = "name_key";
+        private const string SettingsKey = "settings_key";
+        private static readonly string SettingsDefault = string.Empty;
+
+        private const string NameKey = "name_key";
         private const string EmailKey = "email_key";
-		private const string DomainKey = "domain_key";
+        private const string DomainKey = "domain_key";
 
-		#endregion
+        #endregion
 
 
-		public static string GeneralSettings
+        public static string GeneralSettings
 		{
 			get
 			{
@@ -40,44 +41,42 @@ namespace EmpTrack.Helpers
 			{
 				AppSettings.AddOrUpdateValue(SettingsKey, value);
 			}
-		}
+        }
+        public static string UserName
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(NameKey, string.Empty);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(NameKey, value);
+            }
+        }
 
-		public static string UserName
-		{
-			get
-			{
-				return AppSettings.GetValueOrDefault(NameKey, string.Empty);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(NameKey, value);
-			}
-		}
+        public static string Email
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(EmailKey, string.Empty);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(EmailKey, value);
+            }
+        }
 
-		public static string Email
-		{
-			get
-			{
-				return AppSettings.GetValueOrDefault(EmailKey, string.Empty);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(EmailKey, value);
-			}
-		}
+        public static int DomainType
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(DomainKey, 1);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(DomainKey, value);
+            }
+        }
 
-		public static int DomainType
-		{
-			get
-			{
-				return AppSettings.GetValueOrDefault(DomainKey, 1);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(DomainKey, value);
-			}
-		}
-
-
-	}
+    }
 }

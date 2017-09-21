@@ -1,4 +1,4 @@
-
+/*
 // Helpers/Settings.cs This file was automatically added when you installed the Settings Plugin. If you are not using a PCL then comment this file back in to use it.
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
@@ -25,9 +25,6 @@ namespace EmpTrack.Droid.Helpers
 		private const string SettingsKey = "settings_key";
 		private static readonly string SettingsDefault = string.Empty;
 
-        private const string NameKey = "name_key";
-        private const string DomainKey = "domain_key";
-
 		#endregion
 
 
@@ -43,29 +40,5 @@ namespace EmpTrack.Droid.Helpers
 			}
 		}
 
-		public static string UserName
-		{
-			get
-			{
-                return AppSettings.GetValueOrDefault(NameKey, string.Empty);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(NameKey, value);
-			}
-		}
-
-        public static int DomainType
-		{
-			get
-			{
-				return AppSettings.GetValueOrDefault(DomainKey, 1);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(DomainKey, value);
-			}
-		}
-
 	}
-}
+}*/
