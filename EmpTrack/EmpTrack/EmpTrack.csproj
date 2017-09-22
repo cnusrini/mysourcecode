@@ -29,6 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="Views\Profile\MyProfileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -128,6 +131,9 @@
     </Compile>
     <Compile Include="Views\Usage\UsagePage.xaml.cs">
       <DependentUpon>UsagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profile\MyProfileView.xaml.cs">
+      <DependentUpon>MyProfileView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

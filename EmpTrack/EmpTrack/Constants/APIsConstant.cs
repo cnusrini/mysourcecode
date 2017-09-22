@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpTrack.Constants
 {
-    class APIsConstant
+    public class APIsConstant
     {
         //public static String BaseURL = "http://apidocapp.azurewebsites.net/";
 		public static String BaseURL = "http://integratedmobile.azurewebsites.net/";
@@ -30,12 +30,15 @@ namespace EmpTrack.Constants
         public const string IfWorkingWeekend = "ifWorkingWeekend";
         public const string IfComplianceVoilation = "ifComplianceVoilation";
         public const string WorkerAuthorization = "workerAuthorization";
-        #endregion
+		#endregion
 
-        #region
-        public static string ClientIDForDomain1 = "5df5d1a2-6581-41d2-87ec-52dc48f14461";
-        public static string ClientIDForDomain2 = "ee6b1ba3-99b1-4d62-9ef9-833c8c5b31fb";
-        
-        #endregion
-    }
+		#region Domains
+		//public static string ClientIDForDomain1 = "5df5d1a2-6581-41d2-87ec-52dc48f14461";
+		//public static string ClientIDForDomain2 = "ee6b1ba3-99b1-4d62-9ef9-833c8c5b31fb";
+		public static string ClientIDForDomain1 = "5560b06a-cdce-45e3-a7b4-92b17b281045";
+		public static string ClientIDForDomain2 = "5ef95ad6-6928-4e05-9d10-0957fbe544b8";
+        public static string RedirectURLDomain = "ilhob://auth";  
+
+		#endregion
+	}
 }

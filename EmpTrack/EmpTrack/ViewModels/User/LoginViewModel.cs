@@ -28,15 +28,16 @@ namespace EmpTrack.ViewModels.User
                 {
                     try
                     {
+						Settings.DomainType = 1;
                         if (!String.IsNullOrEmpty(Settings.Email))
                         {
                             Application.Current.MainPage = new Views.Menu.MainPage();
                         }
                         else if (String.IsNullOrEmpty(Settings.Email))
                         {
-                            Settings.DomainType = 1;
                             AuthenticationResult ar = await App.PCA1.AcquireTokenAsync(App.Scopes, App.UiParent);
-                            
+                            Settings.UserName = ar.User.Name;
+                            Settings.Email = ar.User.DisplayableId;
                             foreach (var user in App.PCA1.Users)
                             {
                                 App.PCA1.Remove(user);
@@ -60,15 +61,16 @@ namespace EmpTrack.ViewModels.User
                 {
                     try
                     {
+						Settings.DomainType = 2;
                         if (!String.IsNullOrEmpty(Settings.Email))
                         {
                             Application.Current.MainPage = new Views.Menu.MainPage();
                         }
                         else if (String.IsNullOrEmpty(Settings.Email))
                         {
-                            Settings.DomainType = 2;
                             AuthenticationResult ar = await App.PCA2.AcquireTokenAsync(App.Scopes, App.UiParent);
-                            
+							Settings.UserName = ar.User.Name;
+							Settings.Email = ar.User.DisplayableId;
                             foreach (var user in App.PCA2.Users)
                             {
                                 App.PCA2.Remove(user);

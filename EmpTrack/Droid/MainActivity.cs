@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Microsoft.Identity.Client;
+using EmpTrack.Constants;
 
 namespace EmpTrack.Droid
 {
@@ -25,8 +26,12 @@ namespace EmpTrack.Droid
 
             LoadApplication(new App());
 
-            App.PCA1.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
-			App.PCA2.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
+            //         App.PCA1.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
+            //App.PCA2.RedirectUri = "msala7d8cef0-4145-49b2-a91d-95c54051fa3f://auth";
+
+
+            App.PCA1.RedirectUri = APIsConstant.RedirectURLDomain;
+			App.PCA2.RedirectUri = APIsConstant.RedirectURLDomain;
 
             App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
         }

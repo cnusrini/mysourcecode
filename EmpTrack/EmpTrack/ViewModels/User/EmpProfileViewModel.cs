@@ -25,6 +25,7 @@ namespace EmpTrack.ViewModels.User
         private DateTime plannedLeaveFrom = DateTime.Now;
         private String name { get; set; }
         private String email { get; set; }
+        private String authorization { get; set; }
 
 
         private List<String> supportedModes = new List<String>() { "U.S. 70:8", "U.S. 60:7" };
@@ -70,7 +71,7 @@ namespace EmpTrack.ViewModels.User
                 parameters.Add(APIsConstant.EmergencyBreakHour, emrgencyBreakTimeRange);
                 parameters.Add(APIsConstant.IfWorkingWeekend, IfWorkingOnWeekend);
                 parameters.Add(APIsConstant.IfComplianceVoilation, IfComplianceViolation);
-                parameters.Add(APIsConstant.WorkerAuthorization, "");
+                parameters.Add(APIsConstant.WorkerAuthorization, Authorization);
                 PostNewEmployeeDetails(parameters);
 
             });
@@ -96,6 +97,19 @@ namespace EmpTrack.ViewModels.User
         }
 
         #region generic profile info region
+
+		public String Authorization
+		{
+			get { return authorization; }
+			set
+			{
+				if (authorization != value)
+				{
+					authorization = value;
+					OnPropertyChanged("Authorization");
+				}
+			}
+		}
         public String Name
         {
             get { return name; }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmpTrack.Views.Profile.EmpProfile"
@@ -148,7 +148,7 @@
                     </StackLayout>
 
                     <Label Text="Worker Authorization" VerticalOptions="Start" HorizontalOptions="Start" FontSize="{StaticResource NormalFontSize}" TextColor="Black"/>
-                    <Entry  VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
+                    <Entry Text="{Binding Authorization}" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}"  HorizontalOptions="FillAndExpand"/>
 
                     <!-- Save button -->
                     <ActivityIndicator IsVisible="{Binding IfBusy}" IsRunning="{Binding IfBusy}" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
