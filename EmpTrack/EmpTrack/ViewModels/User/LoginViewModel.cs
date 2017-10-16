@@ -20,36 +20,52 @@ namespace EmpTrack.ViewModels.User
         public LoginViewModel()
         { }
 
+        public ICommand User1Command
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    App.Current.MainPage = new NavigationPage(new Views.Auction.AuctionPageForUser1());
+                });
+            }
+        }
+
+
         public ICommand Domain1Command
         {
             get
             {
-                return new Command(async () =>
+                return new Command(() =>
                 {
-                    try
-                    {
-						Settings.DomainType = 1;
-                        if (!String.IsNullOrEmpty(Settings.Email))
-                        {
-                            Application.Current.MainPage = new Views.Menu.MainPage();
-                        }
-                        else if (String.IsNullOrEmpty(Settings.Email))
-                        {
-                            AuthenticationResult ar = await App.PCA1.AcquireTokenAsync(App.Scopes, App.UiParent);
-                            Settings.UserName = ar.User.Name;
-                            Settings.Email = ar.User.DisplayableId;
-                            foreach (var user in App.PCA1.Users)
-                            {
-                                App.PCA1.Remove(user);
-                            }
-                            Application.Current.MainPage = new Views.Menu.MainPage();
-                        }
-                    }
-                    catch(Exception ex)
-                    {
-                        Debug.WriteLine("Exception " + ex.Message);
-                    }
+                    App.Current.MainPage = new Views.Menu.MainPage();
                 });
+      //          return new Command(async () =>
+      //          {
+      //              try
+      //              {
+						//Settings.DomainType = 1;
+      //                  if (!String.IsNullOrEmpty(Settings.Email))
+      //                  {
+      //                      Application.Current.MainPage = new Views.Menu.MainPage();
+      //                  }
+      //                  else if (String.IsNullOrEmpty(Settings.Email))
+      //                  {
+      //                      AuthenticationResult ar = await App.PCA1.AcquireTokenAsync(App.Scopes, App.UiParent);
+      //                      Settings.UserName = ar.User.Name;
+      //                      Settings.Email = ar.User.DisplayableId;
+      //                      foreach (var user in App.PCA1.Users)
+      //                      {
+      //                          App.PCA1.Remove(user);
+      //                      }
+      //                      Application.Current.MainPage = new Views.Menu.MainPage();
+      //                  }
+      //              }
+      //              catch(Exception ex)
+      //              {
+      //                  Debug.WriteLine("Exception " + ex.Message);
+      //              }
+      //          });
             }
         }
 

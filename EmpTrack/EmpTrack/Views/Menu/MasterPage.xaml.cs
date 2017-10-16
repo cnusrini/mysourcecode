@@ -45,6 +45,12 @@ namespace EmpTrack.Views.Menu
             });
             masterPageItem.Add(new MasterPageItem
             {
+                Title="Auction",
+                IconSource="Auction.png",
+                TargetType=typeof(Views.Auction.AuctionPageForUser2)
+            });
+            masterPageItem.Add(new MasterPageItem
+            {
                 Title = "About Us",
                 IconSource = "About.png",
                 TargetType = typeof(Views.AboutUs.AboutUsPage)

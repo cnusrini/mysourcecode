@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpTrack.Views.LotDetail.LotDetailPage"
+             xmlns:local="clr-namespace:EmpTrack.Customizations"
+             Title="Lot Detail">
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <StackLayout Padding="10,15,10,15">
+
+                    <!--label for section 1-->
+                    <Label Text="Section 1" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="{StaticResource HeadingFontSize}" TextColor="{ DynamicResource NormalTextColor }"/>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,60"/>
+
+                    <!--label for section 2-->
+                    <Label Text="Section 2" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="{StaticResource HeadingFontSize}" TextColor="{ DynamicResource NormalTextColor }"/>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10"/>
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <!--Entry for first name-->
+                        <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="First Name"/>
+
+                        <!--Entry for last name-->
+                        <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Last Name"/>
+
+                    </StackLayout>
+
+                    <!--pick datetime-->
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                    <!--Entry for destination address-->
+                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Destination Address"/>
+
+                    <!--Entry for contact #-->
+                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Contact Number"/>
+
+                    <!--Entry for Email Address-->
+                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Email Address"/>
+
+                    <!--Button-->
+                    <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}"/>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

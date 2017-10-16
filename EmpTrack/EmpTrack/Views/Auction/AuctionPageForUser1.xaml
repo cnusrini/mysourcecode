@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpTrack.Views.Auction.AuctionPageForUser1"
+             xmlns:local="clr-namespace:EmpTrack.Customizations"
+             xmlns:converter1="clr-namespace:EmpTrack.Converter"
+             Title="Auction">
+    
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter1:HideAndShowLotNo x:Key="LotNoConverter"/>
+            <converter1:HideAndShowClientID x:Key="ClientIdConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <StackLayout Padding="10,15,10,0">
+
+                <!--Entry for lot#-->
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Client_ID,Converter={StaticResource ClientIdConverter}}"/>
+
+                <!--Label for OR-->
+                <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}" FontSize="{StaticResource NormalFontSize}" />
+
+                <!--Entry for client ID-->
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Client ID" Text="{Binding Client_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}"/>
+
+
+                <!--Label for validate entries-->
+                <Label Text="*You have to fill atleast one text field" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding Status}" TextColor="Red"/>
+
+                <!--Submit-->
+                <local:LoginButton Text="Submit" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding SubmitCommand}"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

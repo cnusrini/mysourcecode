@@ -9,6 +9,14 @@
         <StackLayout Orientation ="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
 
             <StackLayout>
+
+                <!--User 1-->
+
+                <local:LoginButton Text="User 1" VerticalOptions="Center" Command="{Binding User1Command}" 
+            HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
+             WidthRequest="110"/>
+
+
                 <!--Domain 1-->
 
                 <local:LoginButton Text="Domain 1" VerticalOptions="Center" Command="{Binding Domain1Command}" 

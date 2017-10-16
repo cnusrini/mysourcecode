@@ -4,9 +4,10 @@
     Title="My Profile"
     x:Class="EmpTrack.Views.Profile.MyProfileView">
 	<ContentPage.Content>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="My Profile" VerticalOptions="Start" FontSize="{StaticResource NormalFontSize}" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <StackLayout>
+                
+            </StackLayout>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
