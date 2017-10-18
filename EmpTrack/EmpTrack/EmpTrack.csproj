@@ -38,6 +38,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants\APIsConstant.cs" />
+    <Compile Include="Converter\HideAndShowButton.cs" />
     <Compile Include="Converter\HideAndShowBuyerID.cs" />
     <Compile Include="Converter\HideAndShowClientID.cs" />
     <Compile Include="Converter\HideAndShowLotNo.cs" />

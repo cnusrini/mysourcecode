@@ -9,8 +9,9 @@
     
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converter1:HideAndShowLotNo x:Key="LotNoConverter"/>
-            <converter1:HideAndShowClientID x:Key="ClientIdConverter"/>
+            <converter1:HideAndShowLotNo x:Key="lotNoConverter"/>
+            <converter1:HideAndShowClientID x:Key="clientIdConverter"/>
+            <converter1:HideAndShowButton x:Key="dataHasBeenEntered"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -19,21 +20,25 @@
             <StackLayout Padding="10,15,10,0">
 
                 <!--Entry for lot#-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Client_ID,Converter={StaticResource ClientIdConverter}}"/>
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Client_ID,Converter={StaticResource clientIdConverter}}"/>
 
                 <!--Label for OR-->
                 <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}" FontSize="{StaticResource NormalFontSize}" />
 
                 <!--Entry for client ID-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Client ID" Text="{Binding Client_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}"/>
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Client ID" Text="{Binding Client_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource lotNoConverter}}"/>
 
+                <!--show button inline-->
+                <StackLayout Orientation="Horizontal">
 
-                <!--Label for validate entries-->
-                <Label Text="*You have to fill atleast one text field" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding Status}" TextColor="Red"/>
+                    <!--Fetch detail button-->
+                    <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding FetchDetailsCommand}"  Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Lot_Num ,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}" />
 
-                <!--Submit-->
-                <local:LoginButton Text="Submit" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding SubmitCommand}"/>
+                    <!--Personal location button-->
+                    <local:LoginButton Text="Personal Location" VerticalOptions="Start" HorizontalOptions="End" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding PersonalLocationCommand}" Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Client_ID,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}"/>
 
+                </StackLayout>
+                
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

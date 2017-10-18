@@ -16,8 +16,7 @@ namespace EmpTrack.ViewModels.Auction
         INavigation _Navigation;
         public string lot_Num;
         public string buyer_ID;
-        public bool status;
-
+        
         public AuctionViewModelForUser2(INavigation _navigation)
         {
             _Navigation = _navigation;
@@ -50,41 +49,20 @@ namespace EmpTrack.ViewModels.Auction
 
             }
         }
-
-        public bool Status
-        {
-            get
-            {
-                return status;
-            }
-            set
-            {
-                status = value;
-                onPropertyChanged("Status");
-            }
-        }
-
-        public ICommand SubmitCommand
+        
+        public ICommand FetchDetailsCommand
         {
             get
             {
                 return new Command(() =>
                 {
-                    if (String.IsNullOrEmpty(Lot_Num) && String.IsNullOrEmpty(Buyer_ID))
+                    if(!String.IsNullOrEmpty(Lot_Num))
                     {
-                        Status = true;
+                        _Navigation.PushAsync(new Views.LotDetail.LotDetailPage());
                     }
-                    else
+                    else if(!String.IsNullOrEmpty(Buyer_ID))
                     {
-                        Status = false;
-                        if (!String.IsNullOrEmpty(Lot_Num))
-                        {
-                            _Navigation.PushAsync(new Views.LotDetail.LotDetailPage());
-                        }
-                        else if (!String.IsNullOrEmpty(Buyer_ID))
-                        {
-                            _Navigation.PushAsync(new Views.LocationDetail.LocationDetailPage());
-                        }
+                        _Navigation.PushAsync(new Views.LocationDetail.LocationDetailPage());
                     }
                 });
             }

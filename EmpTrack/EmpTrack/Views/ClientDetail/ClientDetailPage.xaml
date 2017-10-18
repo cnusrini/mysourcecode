@@ -20,7 +20,7 @@
                 <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
 
                 <!--Button-->
-                <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}"/>
+                <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}" Style="{StaticResource ButtonStyle}"/>
 
             </StackLayout>
         </StackLayout>

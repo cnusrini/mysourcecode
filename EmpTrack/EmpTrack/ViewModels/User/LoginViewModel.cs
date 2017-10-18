@@ -32,13 +32,14 @@ namespace EmpTrack.ViewModels.User
         }
 
 
-        public ICommand Domain1Command
+        public ICommand DealerCommand
         {
             get
             {
                 return new Command(() =>
                 {
-                    App.Current.MainPage = new Views.Menu.MainPage();
+                    Settings.DomainType = 1;
+                    App.Current.MainPage = new NavigationPage(new Views.Auction.AuctionPageForUser2());
                 });
       //          return new Command(async () =>
       //          {
@@ -69,7 +70,7 @@ namespace EmpTrack.ViewModels.User
             }
         }
 
-        public ICommand Doamin2Command
+        public ICommand ServiceProviderCommand
         {
             get
             {

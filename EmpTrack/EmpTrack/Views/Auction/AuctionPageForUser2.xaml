@@ -10,6 +10,7 @@
         <ResourceDictionary>
             <converter1:HideAndShowLotNo x:Key="LotNoConverter"/>
             <converter1:HideAndShowBuyerID x:Key="BuyerIDConverter"/>
+            <converter1:HideAndShowButton x:Key="dataHasBeenEntered"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -18,20 +19,17 @@
             <StackLayout Padding="10,15,10,0">
 
                 <!--Entry for lot#-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Buyer_ID,Converter={StaticResource BuyerIDConverter}}"/>
+                <Entry x:Name="lot_Num" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Buyer_ID,Converter={StaticResource BuyerIDConverter}}"/>
 
                 <!--Label for OR-->
                 <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}" FontSize="{StaticResource NormalFontSize}" />
 
                 <!--Entry for buyer ID-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Buyer ID" Text="{Binding Buyer_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}"/>
+                <Entry x:Name="buyer_ID" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Buyer ID" Text="{Binding Buyer_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}"/>
 
-
-                <!--Label for validate entries-->
-                <Label Text="*You have to fill atleast one text field" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding Status}" TextColor="Red"/>
-
-                <!--Submit-->
-                <local:LoginButton Text="Submit" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding SubmitCommand}"/>
+                
+                <!--Fetch detail button-->
+                <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Style="{StaticResource ButtonStyle}" Command="{Binding FetchDetailsCommand}"/>
 
             </StackLayout>
         </StackLayout>

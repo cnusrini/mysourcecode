@@ -19,13 +19,13 @@
 
                 <!--Domain 1-->
 
-                <local:LoginButton Text="Domain 1" VerticalOptions="Center" Command="{Binding Domain1Command}" 
+                <local:LoginButton Text="Dealer" VerticalOptions="Center" Command="{Binding DealerCommand}" 
             HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
              WidthRequest="110"/>
 
                 <!--Doamin 2-->
 
-                <local:LoginButton Text="Domain 2" VerticalOptions="Center" Command="{Binding Doamin2Command}"
+                <local:LoginButton Text="Service Provider" VerticalOptions="Center" Command="{Binding ServiceProviderCommand}"
             HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
              WidthRequest="110"/>
 

@@ -16,8 +16,7 @@ namespace EmpTrack.ViewModels.Auction
         INavigation _Navigation;
         public string lot_Num;
         public string client_ID;
-        public bool status;
-
+        
         public AuctionViewModelForUser1(INavigation _navigation)
         {
             _Navigation = _navigation;
@@ -50,45 +49,30 @@ namespace EmpTrack.ViewModels.Auction
 
             }
         }
-
-        public bool Status
-        {
-            get
-            {
-                return status;
-            }
-            set
-            {
-                status = value;
-                onPropertyChanged("Status");
-            }
-        }
-
-        public ICommand SubmitCommand
+        
+        public ICommand FetchDetailsCommand
         {
             get
             {
                 return new Command(() =>
                 {
-                    if (String.IsNullOrEmpty(Lot_Num) && String.IsNullOrEmpty(Client_ID))
-                    {
-                        Status = true;
-                    }
-                    else
-                    {
-                        Status = false;
-                        if (!String.IsNullOrEmpty(Lot_Num))
-                        {
-                            _Navigation.PushAsync(new Views.LotDetail.LotDetailPage());
-                        }
-                        else if (!String.IsNullOrEmpty(Client_ID))
-                        {
-                            _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage());
-                        }
-                    }
+                    _Navigation.PushAsync(new Views.LotDetail.LotDetailPage());
                 });
             }
         }
+
+
+        public ICommand PersonalLocationCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage());
+                });
+            }
+        }
+
 
         private void onPropertyChanged(string v)
         {
