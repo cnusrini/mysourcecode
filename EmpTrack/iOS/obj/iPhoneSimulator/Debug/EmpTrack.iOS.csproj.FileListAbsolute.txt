@@ -10,7 +10,6 @@ D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Xamar
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\EmpTrack.pdb
-D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\EmpTrack.dll.mdb
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Microsoft.Identity.Client.xml
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.xml
 D:\Project\EmpTracking\mysourcecode\EmpTrack\iOS\bin\iPhoneSimulator\Debug\Plugin.Settings.xml

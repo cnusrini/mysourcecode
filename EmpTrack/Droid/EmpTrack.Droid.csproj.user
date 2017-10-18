@@ -4,5 +4,6 @@
     <SelectedDevice>3.3_WQVGA_API_23</SelectedDevice>
     <DefaultDevice>3.3_WQVGA_API_23</DefaultDevice>
     <ProjectView>ProjectFiles</ProjectView>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>
