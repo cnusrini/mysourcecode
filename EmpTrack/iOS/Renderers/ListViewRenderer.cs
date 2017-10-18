@@ -15,10 +15,10 @@ using CoreGraphics;
 [assembly: ExportRenderer(typeof(CollapsibleListView), typeof(Xamarin.Forms.Platform.iOS.ListViewRenderer))]
 namespace EmpTrack.iOS.Renderers
 {
-    public class ListViewRenderer[assembly: ExportRenderer (typeof(CollapsibleListView), typeof(Xamarin.Forms.Platform.iOS.ListViewRenderer))]
+    public class ListViewRendererViewRendere :ViewRenderer<CollapsibleListView, UITableView >
     {
     
-    public ListViewRenderer()
+    public ListViewRendererViewRendere()
     {
     }
 
