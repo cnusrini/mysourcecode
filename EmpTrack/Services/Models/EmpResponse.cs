@@ -6,6 +6,6 @@ namespace Services.Models
 {
     public class EmpResponse : BaseServerResponse
     {
-        public String EmployeeId { get; set; }
+        public String id { get; set; }
     }
 }

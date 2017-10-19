@@ -58,7 +58,7 @@ namespace EmpTrack.ViewModels.Auction
                 {
                     if(!String.IsNullOrEmpty(Lot_Num))
                     {
-                        _Navigation.PushAsync(new Views.LotDetail.LotDetailPage());
+                        _Navigation.PushAsync(new Views.LotDetail.LotDetailPage(Lot_Num));
                     }
                     else if(!String.IsNullOrEmpty(Buyer_ID))
                     {

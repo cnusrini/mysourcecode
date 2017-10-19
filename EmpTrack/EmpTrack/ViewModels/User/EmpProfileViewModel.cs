@@ -85,8 +85,8 @@ namespace EmpTrack.ViewModels.User
             if (empResponse.Status)
             {
                 //Employee details successfully added
-                Debug.WriteLine("Emp Id " + empResponse.EmployeeId);
-                await Application.Current.MainPage.DisplayAlert("Success", "Data Save and emp id "+ empResponse.EmployeeId, "OK");
+                Debug.WriteLine("Emp Id " + empResponse.id);
+                await Application.Current.MainPage.DisplayAlert("Success", "Data Save and emp id "+ empResponse.id, "OK");
             }
             else
             {

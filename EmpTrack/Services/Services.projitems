@@ -11,8 +11,11 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseServerResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EmpResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LotDetails.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NetworkServices\BaseService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NetworkServices\LotDetails\ILotDetailsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NetworkServices\LotDetails\LotDetailsService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NetworkServices\User\IUserService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NetworkServices\User\UserService.cs" />
   </ItemGroup>

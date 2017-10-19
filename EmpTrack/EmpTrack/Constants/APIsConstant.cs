@@ -12,6 +12,7 @@ namespace EmpTrack.Constants
 		public static String BaseURL = "http://integratedmobile.azurewebsites.net/";
 		#region  web apis 
 		public static String SaveEmpDetailAPI = "api/employee/request/profile";
+        public static String FetchLotDetails = "http://e5ec19fb.ngrok.io/api/vehicle/request/get/detail?";
         #endregion
 
         #region Fields Constatns
@@ -30,6 +31,7 @@ namespace EmpTrack.Constants
         public const string IfWorkingWeekend = "ifWorkingWeekend";
         public const string IfComplianceVoilation = "ifComplianceVoilation";
         public const string WorkerAuthorization = "workerAuthorization";
+        public const string Lot_ID = "lot_id";
 		#endregion
 
 		#region Domains

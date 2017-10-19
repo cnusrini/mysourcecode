@@ -1,4 +1,5 @@
 ﻿using EmpTrack.ViewModels.LotDetail;
+using Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,23 @@ namespace EmpTrack.Views.LotDetail
     public partial class LotDetailPage : ContentPage
     {
         LotDetailViewModel lotdetailViewModel;
-        public LotDetailPage()
+        public LotDetailPage(string lotnum)
         {
             InitializeComponent();
-            lotdetailViewModel = new LotDetailViewModel(Navigation);
+            lotdetailViewModel = new LotDetailViewModel(Navigation , lotnum);
             BindingContext = lotdetailViewModel;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            FetchDetails();
+            
+        }
+
+        private async void FetchDetails()
+        {
+            await lotdetailViewModel.getDetails();          
         }
     }
 }
