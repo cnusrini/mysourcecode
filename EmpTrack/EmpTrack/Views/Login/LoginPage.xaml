@@ -10,24 +10,24 @@
 
             <StackLayout>
 
-                <!--User 1-->
+                <!--Customer-->
 
-                <local:LoginButton Text="User 1" VerticalOptions="Center" Command="{Binding User1Command}" 
+                <local:LoginButton Text="Customer" VerticalOptions="Center" Command="{Binding CustomerCommand}" 
             HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
-             WidthRequest="110"/>
+             WidthRequest="120"/>
 
 
                 <!--Domain 1-->
 
                 <local:LoginButton Text="Dealer" VerticalOptions="Center" Command="{Binding DealerCommand}" 
             HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
-             WidthRequest="110"/>
+             WidthRequest="120"/>
 
                 <!--Doamin 2-->
 
                 <local:LoginButton Text="Service Provider" VerticalOptions="Center" Command="{Binding ServiceProviderCommand}"
             HorizontalOptions="CenterAndExpand" Style="{StaticResource ButtonStyle}" 
-             WidthRequest="110"/>
+             WidthRequest="120"/>
 
             </StackLayout>
                        

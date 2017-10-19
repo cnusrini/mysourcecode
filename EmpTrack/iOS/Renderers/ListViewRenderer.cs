@@ -12,13 +12,13 @@ using EmpTrack;
 using Xamarin.Forms.Platform.iOS;
 using CoreGraphics;
 
-[assembly: ExportRenderer(typeof(CollapsibleListView), typeof(Xamarin.Forms.Platform.iOS.ListViewRenderer))]
+[assembly: ExportRenderer(typeof(CollapsibleListView), typeof(EmpTrack.iOS.Renderers.ListViewRenderer))]
 namespace EmpTrack.iOS.Renderers
 {
-    public class ListViewRendererViewRendere :ViewRenderer<CollapsibleListView, UITableView >
+    public class ListViewRenderer :ViewRenderer<CollapsibleListView, UITableView >
     {
     
-    public ListViewRendererViewRendere()
+    public ListViewRenderer()
     {
     }
 

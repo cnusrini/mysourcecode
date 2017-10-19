@@ -35,7 +35,7 @@
                     <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding FetchDetailsCommand}"  Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Lot_Num ,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}" />
 
                     <!--Personal location button-->
-                    <local:LoginButton Text="Personal Location" VerticalOptions="Start" HorizontalOptions="End" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding PersonalLocationCommand}" Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Client_ID,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}"/>
+                    <local:LoginButton Text="Custom Location" VerticalOptions="Start" HorizontalOptions="End" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding PersonalLocationCommand}" Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Client_ID,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}"/>
 
                 </StackLayout>
                 

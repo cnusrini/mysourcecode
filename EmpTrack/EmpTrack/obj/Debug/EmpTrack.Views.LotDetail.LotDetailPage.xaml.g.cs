@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.LotDetail {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\LotDetail\\LotDetailPa" +
-        "ge.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\Emp_Track\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\LotDetail\\LotDetailPage" +
+        ".xaml")]
     public partial class LotDetailPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

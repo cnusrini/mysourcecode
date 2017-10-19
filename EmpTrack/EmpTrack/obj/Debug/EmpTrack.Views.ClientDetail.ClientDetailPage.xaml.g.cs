@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.ClientDetail {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\ClientDetail\\ClientDe" +
-        "tailPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\Emp_Track\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\ClientDetail\\ClientDeta" +
+        "ilPage.xaml")]
     public partial class ClientDetailPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

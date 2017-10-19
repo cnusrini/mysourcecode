@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.Auction {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\Auction\\AuctionPageFo" +
-        "rUser1.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\Emp_Track\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\Auction\\AuctionPageForU" +
+        "ser1.xaml")]
     public partial class AuctionPageForUser1 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

@@ -14,41 +14,57 @@
                     <!--label for section 1-->
                     <Label Text="Section 1" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="{StaticResource HeadingFontSize}" TextColor="{ DynamicResource NormalTextColor }"/>
 
-
                     <!--Horizontal line-->
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
 
-                    <Grid ColumnSpacing="20" RowSpacing="10" VerticalOptions="Start" Padding="20,10,0,10">
+                    <!--Api response-->
+                    <StackLayout Padding="10,10,0,10">
+                        <StackLayout Orientation="Horizontal">
 
-                        <!--api respone -->
-                        <Label Text="Make :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="0" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Model :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="1" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Year :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="2" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Trim :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="3" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Description :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="4" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="4" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Class :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="5" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="5" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                        <Label Text="Location :" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="6" Grid.Column="0" TextColor="{StaticResource NormalTextColor}"/>
-                        <Label Text="XYZ" VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="6" Grid.Column="2" TextColor="{StaticResource NormalTextColor}"/>
-
-                    </Grid>
+                            <Label Text="Make :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="Lexus" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
 
+                            <Label Text="Model :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="CT" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+                            <Label Text="Year" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="2011" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Class :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="compact car" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+
+                            <Label Text="Location :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="dallas" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Trim :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="200h-4dr hatchback" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label Text="Location :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                            <Label Text="(1.8L4-cyl. hybrid CVT automatic)" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    
                     <!--label for section 2-->
                     <Label Text="Section 2" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="{StaticResource HeadingFontSize}" TextColor="{ DynamicResource NormalTextColor }"/>
                     
-                    
+                    <!--Horizontal line-->
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray" Margin="0,0,0,10"/>
 
                     <StackLayout Orientation="Horizontal">
@@ -61,18 +77,20 @@
 
                     </StackLayout>
 
-                    <!--pick datetime-->
-                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
-
                     <!--Entry for destination address-->
-                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Destination Address"/>
+                    <Label Text="Destination Address" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="City,Zip,State"/>
 
-                    <!--Entry for contact #-->
-                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Contact Number"/>
+                    <!--Shipment datetime-->
+                    <Label Text="Shipment Datetime From/To" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                    
+                    <StackLayout Orientation="Horizontal">
 
-                    <!--Entry for Email Address-->
-                    <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Email Address"/>
+                        <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                        <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
 
+                    </StackLayout>
+                    
                     <!--Button-->
                     <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}" Style="{StaticResource ButtonStyle}"/>
 

@@ -20,7 +20,7 @@ namespace EmpTrack.ViewModels.User
         public LoginViewModel()
         { }
 
-        public ICommand User1Command
+        public ICommand CustomerCommand
         {
             get
             {

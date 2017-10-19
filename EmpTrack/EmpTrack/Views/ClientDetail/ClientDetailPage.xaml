@@ -11,13 +11,21 @@
             <StackLayout Padding="10,15,10,15">
 
                 <!--Entry for source address-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Source Address"/>
+                <Label Text="Source Address" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="City,Zip,State"/>
 
                 <!--Entry for destination address-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Destination Address"/>
+                <Label Text="Destination Address" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="City,Zip,State"/>
 
                 <!--Pick datetime-->
-                <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Shipment DateTime From/To" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
+                <StackLayout Orientation="Horizontal">
+                    
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                    <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                </StackLayout>
 
                 <!--Button-->
                 <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}" Style="{StaticResource ButtonStyle}"/>
