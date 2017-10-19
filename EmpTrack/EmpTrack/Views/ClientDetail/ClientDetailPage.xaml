@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmpTrack.Views.ClientDetail.ClientDetailPage"
+             xmlns:local="clr-namespace:EmpTrack.Customizations"
+             Title="Client Detail">
+
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <StackLayout Padding="10,15,10,15">
+
+                <!--Entry for source address-->
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Source Address"/>
+
+                <!--Entry for destination address-->
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Destination Address"/>
+
+                <!--Pick datetime-->
+                <DatePicker VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+                <!--Button-->
+                <local:LoginButton Text="Get Quote" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="White" WidthRequest="110" Command="{Binding GetQuoteCommand}" Style="{StaticResource ButtonStyle}"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

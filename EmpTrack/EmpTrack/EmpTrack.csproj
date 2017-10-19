@@ -38,11 +38,23 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants\APIsConstant.cs" />
+    <Compile Include="Converter\HideAndShowButton.cs" />
+    <Compile Include="Converter\HideAndShowBuyerID.cs" />
+    <Compile Include="Converter\HideAndShowClientID.cs" />
+    <Compile Include="Converter\HideAndShowLotNo.cs" />
+    <Compile Include="Customizations\CollapsibleListView.cs" />
     <Compile Include="Customizations\LoginButton.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Models\EntityClass.cs" />
+    <Compile Include="Models\Enum.cs" />
     <Compile Include="Models\MasterPageItem.cs" />
     <Compile Include="Models\SupportedMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Auction\AuctionViewModelForUser1.cs" />
+    <Compile Include="ViewModels\Auction\AuctionViewModelForUser2.cs" />
+    <Compile Include="ViewModels\ClientDetail\ClientDetailViewModel.cs" />
+    <Compile Include="ViewModels\LocationDetails\LocationDetailsViewModel.cs" />
+    <Compile Include="ViewModels\LotDetail\LotDetailViewModel.cs" />
     <Compile Include="ViewModels\User\EmpProfileViewModel.cs" />
     <Compile Include="ViewModels\User\LoginViewModel.cs" />
     <Compile Include="Views\AboutUs\AboutUsPage.xaml.cs">
@@ -54,6 +66,15 @@
     <Compile Include="Views\AboutUs\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Auction\AuctionPageForUser1.xaml.cs">
+      <DependentUpon>AuctionPageForUser1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auction\AuctionPageForUser2.xaml.cs">
+      <DependentUpon>AuctionPageForUser2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClientDetail\ClientDetailPage.xaml.cs">
+      <DependentUpon>ClientDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\BidsTabPage.xaml.cs">
       <DependentUpon>BidsTabPage.xaml</DependentUpon>
     </Compile>
@@ -63,8 +84,14 @@
     <Compile Include="Views\Dashboard\DashboardTagPage.xaml.cs">
       <DependentUpon>DashboardTagPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LocationDetail\LocationDetailPage.xaml.cs">
+      <DependentUpon>LocationDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LotDetail\LotDetailPage.xaml.cs">
+      <DependentUpon>LotDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Menu\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -98,6 +125,9 @@
     </Compile>
     <Compile Include="Views\PolicyMenu\TermsOfUseTabPage.xaml.cs">
       <DependentUpon>TermsOfUseTabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pricing\PricingPage.xaml.cs">
+      <DependentUpon>PricingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Profile\EmailAlertTabPage.xaml.cs">
       <DependentUpon>EmailAlertTabPage.xaml</DependentUpon>
@@ -335,6 +365,43 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Usage\UsagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ClientDetail\ClientDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LotDetail\LotDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Pricing\PricingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Auction\AuctionPageForUser2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Auction\AuctionPageForUser1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LocationDetail\LocationDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

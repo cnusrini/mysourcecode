@@ -1,18 +1,17 @@
-﻿<Properties StartupConfiguration="{681340CB-C033-4828-9201-40D0D507DA9A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/App.xaml.cs">
+﻿<Properties StartupConfiguration="{FC97B193-CF7B-4403-95DD-0EFCC980B29C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmpTrack/Views/Auction/AuctionPageForUser2.xaml">
     <Files>
-      <File FileName="EmpTrack/App.xaml.cs" Line="21" Column="72" />
+      <File FileName="../../../WH/WH/iOS/Main.cs" Line="16" Column="1" />
+      <File FileName="iOS/Renderers/ListViewRenderer.cs" Line="21" Column="39" />
+      <File FileName="EmpTrack/Views/Auction/AuctionPageForUser2.xaml" Line="32" Column="252" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/muhammadrashid/waqas/Emp/mysourcecode/EmpTrack/Services/NetworkServices/User/UserService.cs" relfile="Services/NetworkServices/User/UserService.cs" line="24" column="1" />
-      <Breakpoint file="/Users/muhammadrashid/waqas/Emp/mysourcecode/EmpTrack/Services/NetworkServices/User/UserService.cs" relfile="Services/NetworkServices/User/UserService.cs" line="21" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.EmpTrack.Droid PreferredExecutionTarget="Android.4C3HMQ1612017682" />
+  <MonoDevelop.Ide.ItemProperties.EmpTrack.Droid PreferredExecutionTarget="Android.3.7_FWVGA_kitkat" />
   <MonoDevelop.Ide.ItemProperties.EmpTrack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.317F97E1-5E1C-42B5-9D0E-8A3C48922508">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.EmpTrack.iOS>

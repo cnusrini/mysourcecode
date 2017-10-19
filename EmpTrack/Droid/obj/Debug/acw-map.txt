@@ -2,6 +2,14 @@ EmpTrack.Droid.MainActivity, EmpTrack.Droid;md5d5278ce328528f546b403a881f62c713.
 EmpTrack.Droid.MainActivity, EmpTrack.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d5278ce328528f546b403a881f62c713.MainActivity
 EmpTrack.Droid.MainActivity;md5d5278ce328528f546b403a881f62c713.MainActivity
 emptrack.droid.MainActivity;md5d5278ce328528f546b403a881f62c713.MainActivity
+EmpTrack.Droid.Renderers.DataAdopterListViewRenderer, EmpTrack.Droid;md5123d7a13317405b834536718b8f1da0f.DataAdopterListViewRenderer
+EmpTrack.Droid.Renderers.DataAdopterListViewRenderer, EmpTrack.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5123d7a13317405b834536718b8f1da0f.DataAdopterListViewRenderer
+EmpTrack.Droid.Renderers.DataAdopterListViewRenderer;md5123d7a13317405b834536718b8f1da0f.DataAdopterListViewRenderer
+emptrack.droid.renderers.DataAdopterListViewRenderer;md5123d7a13317405b834536718b8f1da0f.DataAdopterListViewRenderer
+EmpTrack.Droid.Renderers.ListViewRenderer, EmpTrack.Droid;md5123d7a13317405b834536718b8f1da0f.ListViewRenderer
+EmpTrack.Droid.Renderers.ListViewRenderer, EmpTrack.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5123d7a13317405b834536718b8f1da0f.ListViewRenderer
+EmpTrack.Droid.Renderers.ListViewRenderer;md5123d7a13317405b834536718b8f1da0f.ListViewRenderer
+emptrack.droid.renderers.ListViewRenderer;md5123d7a13317405b834536718b8f1da0f.ListViewRenderer
 EmpTrack.Droid.Renderers.LoginPageRenderer, EmpTrack.Droid;md5123d7a13317405b834536718b8f1da0f.LoginPageRenderer
 EmpTrack.Droid.Renderers.LoginPageRenderer, EmpTrack.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5123d7a13317405b834536718b8f1da0f.LoginPageRenderer
 EmpTrack.Droid.Renderers.LoginPageRenderer;md5123d7a13317405b834536718b8f1da0f.LoginPageRenderer
