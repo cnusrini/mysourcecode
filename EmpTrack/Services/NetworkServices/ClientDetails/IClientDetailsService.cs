@@ -7,6 +7,6 @@ namespace Services.NetworkServices.ClientDetails
 {
     public interface IClientDetailsService
     {
-        Task<Services.Models.ClientDetails> FetchClientDetails();
+        Task<Services.Models.ClientDetails> FetchClientDetails(string clientid);
     }
 }

@@ -10,7 +10,7 @@ namespace Services.NetworkServices.ClientDetails
 {
     class ClientDetailsService : BaseService, IClientDetailsService
     {
-        public async Task<Models.ClientDetails> FetchClientDetails()
+        public async Task<Models.ClientDetails> FetchClientDetails(string clientid)
         {
             try
             {

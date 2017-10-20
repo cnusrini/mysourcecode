@@ -14,11 +14,22 @@ namespace EmpTrack.Views.ClientDetail
     public partial class ClientDetailPage : ContentPage
     {
         ClientDetailViewModel clientdetailViewModel;
-        public ClientDetailPage()
+        public ClientDetailPage(string clientdetail)
         {
             InitializeComponent();
-            clientdetailViewModel = new ClientDetailViewModel(Navigation);
+            clientdetailViewModel = new ClientDetailViewModel(Navigation,clientdetail);
             BindingContext = clientdetailViewModel;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            FetchClientDetails();
+        }
+
+        private async void FetchClientDetails()
+        {
+            await clientdetailViewModel.FetchClientDetail();
         }
     }
 }

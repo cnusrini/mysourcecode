@@ -68,7 +68,7 @@ namespace EmpTrack.ViewModels.Auction
             {
                 return new Command(() =>
                 {
-                    _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage());
+                    _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage(Client_ID));
                 });
             }
         }
