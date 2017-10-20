@@ -42,6 +42,7 @@
     <Compile Include="Converter\HideAndShowBuyerID.cs" />
     <Compile Include="Converter\HideAndShowClientID.cs" />
     <Compile Include="Converter\HideAndShowLotNo.cs" />
+    <Compile Include="Converter\ShowAndHideButtonForMultipleFields.cs" />
     <Compile Include="Customizations\CollapsibleListView.cs" />
     <Compile Include="Customizations\LoginButton.cs" />
     <Compile Include="Helpers\Settings.cs" />

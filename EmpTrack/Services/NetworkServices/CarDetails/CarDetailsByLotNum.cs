@@ -1,17 +1,18 @@
-﻿using EmpTrack.Constants;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Services.Models;
+using Newtonsoft.Json;
+using System.Diagnostics;
 
-namespace Services.NetworkServices.LotDetails
+namespace Services.NetworkServices.CarDetails
 {
-    public class LotDetailsService : BaseService, ILotDetailsService
+    class CarDetailsByLotNum : BaseService, ICarDetailsService
     {
-        public async Task<Services.Models.LotDetails> GetLotDetails(string lot_id)
+        //returns car details against lot id
+
+        public async Task<Models.LotDetails> FetchCarDetailsByLotNumber(string lot_id)
         {
             try
             {
@@ -30,12 +31,6 @@ namespace Services.NetworkServices.LotDetails
             }
 
             return null;
-
-            //var content = new StringContent(JsonConvert.SerializeObject(parameters), Encoding.UTF8, "application/json");
-            //HttpResponseMessage responseJson = await client.GetAsync(APIsConstant.FetchLotDetails, content);
-            //var json = await responseJson.Content.ReadAsStringAsync();
-            //var lotResponse = JsonConvert.DeserializeObject<Services.Models.LotDetails>(json);
-            //return lotResponse;
         }
     }
 }

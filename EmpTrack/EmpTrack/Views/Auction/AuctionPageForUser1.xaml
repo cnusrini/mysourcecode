@@ -22,23 +22,22 @@
                 <!--Entry for lot#-->
                 <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Lot#" Text="{Binding Lot_Num}" IsEnabled="{Binding Client_ID,Converter={StaticResource clientIdConverter}}"/>
 
-                <!--Label for OR-->
+                <!--Label for OR between Entries-->
                 <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}" FontSize="{StaticResource NormalFontSize}" />
 
                 <!--Entry for client ID-->
-                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Client ID" Text="{Binding Client_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource lotNoConverter}}"/>
+                <Entry VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Client ID" Text="{Binding Client_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource lotNoConverter}}" Margin="0,0,0,10"/>
 
-                <!--show button inline-->
-                <StackLayout Orientation="Horizontal">
+                <!--Fetch detail button-->
+                <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding FetchDetailsCommand}"  Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Lot_Num ,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}" />
 
-                    <!--Fetch detail button-->
-                    <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding FetchDetailsCommand}"  Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Lot_Num ,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}" />
+                <!--Label for OR between buttons-->
+                <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}"/>
 
-                    <!--Personal location button-->
-                    <local:LoginButton Text="Custom Location" VerticalOptions="Start" HorizontalOptions="End" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding PersonalLocationCommand}" Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Client_ID,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}"/>
+                <!--Personal location button-->
+                <local:LoginButton Text="Custom Location" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Command="{Binding PersonalLocationCommand}" Style="{StaticResource ButtonStyle}" IsEnabled="{Binding Client_ID,Converter={StaticResource dataHasBeenEntered}}" FontSize="{StaticResource SmallFontSize}"/>
 
-                </StackLayout>
-                
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -16,6 +16,7 @@ namespace EmpTrack.ViewModels.Auction
         INavigation _Navigation;
         public string lot_Num;
         public string buyer_ID;
+        public string concatFields;
         
         public AuctionViewModelForUser2(INavigation _navigation)
         {
@@ -32,7 +33,7 @@ namespace EmpTrack.ViewModels.Auction
             {
                 lot_Num = value;
                 onPropertyChanged("Lot_Num");
-
+                onPropertyChanged("ConcatFields");
             }
         }
 
@@ -46,10 +47,18 @@ namespace EmpTrack.ViewModels.Auction
             {
                 buyer_ID = value;
                 onPropertyChanged("Buyer_ID");
-
+                onPropertyChanged("ConcatFields");
             }
         }
-        
+
+        public string ConcatFields
+        {
+            get
+            {
+                return string.Format("{0},{1}", lot_Num, buyer_ID);  
+            }
+        }
+
         public ICommand FetchDetailsCommand
         {
             get

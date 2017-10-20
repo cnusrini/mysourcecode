@@ -1,5 +1,5 @@
 ﻿using EmpTrack.Constants;
-using Services.NetworkServices.LotDetails;
+using Services.NetworkServices.CarDetails;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,11 +81,11 @@ namespace EmpTrack.ViewModels.LotDetail
         }
         
 
-        public async Task getDetails()
+        public async Task FetchCarDetailsByLotNum()
         {
             IsBusy = true;
-            var lotDetailService = new LotDetailsService();
-            LotDetails lotResponse = await lotDetailService.GetLotDetails(LotNum);
+            var carDetailByLotNum = new CarDetailsByLotNum();
+            LotDetails lotResponse = await carDetailByLotNum.FetchCarDetailsByLotNumber(LotNum);
             if (lotResponse.Status)
             {
                 //assign to notifuy property

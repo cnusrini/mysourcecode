@@ -10,7 +10,7 @@
         <ResourceDictionary>
             <converter1:HideAndShowLotNo x:Key="LotNoConverter"/>
             <converter1:HideAndShowBuyerID x:Key="BuyerIDConverter"/>
-            <converter1:HideAndShowButton x:Key="dataHasBeenEntered"/>
+            <converter1:ShowAndHideButtonForMultipleFields x:Key="dataHasBeenEntered"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -25,12 +25,10 @@
                 <Label Text="OR" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,20" TextColor="{StaticResource NormalTextColor}" FontSize="{StaticResource NormalFontSize}" />
 
                 <!--Entry for buyer ID-->
-                <Entry x:Name="buyer_ID" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Buyer ID" Text="{Binding Buyer_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}"/>
+                <Entry x:Name="buyer_ID" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="Buyer ID" Text="{Binding Buyer_ID}" IsEnabled="{Binding Lot_Num,Converter={StaticResource LotNoConverter}}" Margin="0,0,0,10"/>
 
-                
                 <!--Fetch detail button-->
-                <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Style="{StaticResource ButtonStyle}" Command="{Binding FetchDetailsCommand}"/>
-
+                <local:LoginButton Text="Fetch Details" VerticalOptions="Start" HorizontalOptions="EndAndExpand" TextColor="{StaticResource ButtonTextColor}" WidthRequest="110" Style="{StaticResource ButtonStyle}" Command="{Binding FetchDetailsCommand}" IsEnabled="{Binding ConcatFields,Converter={StaticResource dataHasBeenEntered}}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

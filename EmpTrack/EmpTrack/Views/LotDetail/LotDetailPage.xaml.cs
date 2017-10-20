@@ -25,13 +25,13 @@ namespace EmpTrack.Views.LotDetail
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            FetchDetails();
+            FetchCarDetails();
             
         }
 
-        private async void FetchDetails()
+        private async void FetchCarDetails()
         {
-            await lotdetailViewModel.getDetails();          
+            await lotdetailViewModel.FetchCarDetailsByLotNum();          
         }
     }
 }
