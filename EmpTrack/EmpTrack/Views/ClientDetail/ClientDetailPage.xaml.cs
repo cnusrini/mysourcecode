@@ -1,4 +1,5 @@
 ﻿using EmpTrack.ViewModels.ClientDetail;
+using Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,22 +15,17 @@ namespace EmpTrack.Views.ClientDetail
     public partial class ClientDetailPage : ContentPage
     {
         ClientDetailViewModel clientdetailViewModel;
-        public ClientDetailPage(string clientdetail)
+        public ClientDetailPage(Client clientdetails)
         {
             InitializeComponent();
-            clientdetailViewModel = new ClientDetailViewModel(Navigation,clientdetail);
-            BindingContext = clientdetailViewModel;
+            clientdetailViewModel = new ClientDetailViewModel(Navigation);
+            BindingContext = clientdetails;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            FetchClientDetails();
         }
-
-        private async void FetchClientDetails()
-        {
-            await clientdetailViewModel.FetchClientDetail();
-        }
+        
     }
 }

@@ -15,34 +15,25 @@ namespace EmpTrack.Views.LocationDetail
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LocationDetailPage : ContentPage
     {
-        LocationDetailsViewModel locationDetailViewModel;
-        List<string> parent;
         CollapsibleListView nativeListView2 = null;
+        List<LotGroupEntity> Vehicle;
 
-
-        public LocationDetailPage(string buyer_id)
+        public LocationDetailPage(List<LotGroupEntity> vehicle)
         {
             InitializeComponent();
-            locationDetailViewModel = new LocationDetailsViewModel(buyer_id);
-            parent = new List<string>();
-
-           
+            Vehicle = new List<LotGroupEntity>();
+            Vehicle = vehicle;
+            UpdateView();
         }
-
-        protected override void OnAppearing()
+    
+        private void UpdateView()
         {
-            base.OnAppearing();
-             GetLotList();
-           
-        }
-
-        private async void GetLotList()
-        {
-            await locationDetailViewModel.FetchLotList();
+            
             nativeListView2 = new CollapsibleListView();
             // REQUIRED: To share a scrollable view with other views in a StackLayout, it should have a VerticalOptions of FillAndExpand.
             nativeListView2.VerticalOptions = LayoutOptions.FillAndExpand;
-            nativeListView2.Items = locationDetailViewModel.Vehicle;
+            nativeListView2.Items = Vehicle;
+            
             Content = new StackLayout
             {
                 Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
@@ -50,9 +41,7 @@ namespace EmpTrack.Views.LocationDetail
                     nativeListView2
                 }
             };
-           
-
+            
         }
-        
     }
 }

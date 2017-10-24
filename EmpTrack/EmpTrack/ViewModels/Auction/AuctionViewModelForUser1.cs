@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Services.Models;
+using Services.NetworkServices.ClientDetails;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +19,9 @@ namespace EmpTrack.ViewModels.Auction
         INavigation _Navigation;
         public string lot_Num;
         public string client_ID;
+        public Vehicle vehiclee;
+        public bool isbusy;
+        public Client clientdetails;
         
         public AuctionViewModelForUser1(INavigation _navigation)
         {
@@ -49,6 +55,47 @@ namespace EmpTrack.ViewModels.Auction
 
             }
         }
+
+        public bool IsBusy
+        {
+            get
+            {
+                return isbusy;
+            }
+            set
+            {
+                isbusy = value;
+                onPropertyChanged("IsBusy");
+            }
+        }
+
+        public Vehicle Vehiclee
+        {
+            get
+            {
+                return vehiclee;
+            }
+            set
+            {
+                vehiclee = value;
+                onPropertyChanged("Vehiclee");
+            }
+        }
+
+        public Client ClientDetails
+        {
+            get
+            {
+                return clientdetails;
+            }
+            set
+            {
+                clientdetails = value;
+                onPropertyChanged("ClientDetails");
+            }
+        }
+
+
         
         public ICommand FetchDetailsCommand
         {
@@ -56,23 +103,89 @@ namespace EmpTrack.ViewModels.Auction
             {
                 return new Command(() =>
                 {
-                    _Navigation.PushAsync(new Views.LotDetail.LotDetailPage(Lot_Num));
+                    IsBusy = true;
+                    FetchCarDetailsByLotNum();
                 });
             }
         }
 
-
+        
         public ICommand PersonalLocationCommand
         {
             get
             {
                 return new Command(() =>
                 {
-                    _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage(Client_ID));
+                    IsBusy = true;
+                    FetchClientDetail();
                 });
             }
         }
 
+
+
+        #region Fetch client detail against client id
+        private async void FetchClientDetail()
+        {
+            var clientdetailservice = new ClientDetailsService();
+            ClientDetails clientResponse = await clientdetailservice.FetchClientDetails(Client_ID);
+            // if api response is not null
+            if (clientResponse != null)
+            {
+                if (clientResponse.Status)
+                {
+                    ClientDetails = clientResponse.client;
+                    IsBusy = false;
+                    _Navigation.PushAsync(new Views.ClientDetail.ClientDetailPage(ClientDetails));
+                }
+                // if api response is null
+                else
+                {
+                    // show error
+                    await Application.Current.MainPage.DisplayAlert("Error", "Something went wrong, check internet settings", "OK");
+                    Debug.WriteLine("Error Message : " + clientResponse.ErrorMessage);
+                    IsBusy = false;
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Something went wrong", "Cancel");
+                IsBusy = false;
+            }
+        }
+        #endregion
+
+        #region Fetch car detail against lot ID
+        private async void FetchCarDetailsByLotNum()
+        {
+            var carDetailByLotNum = new Services.NetworkServices.CarDetails.CarDetailsService();
+            LotDetails lotResponse = await carDetailByLotNum.FetchCarDetailsByLotNumber(Lot_Num);
+            // if api response is not null
+            if (lotResponse != null)
+            {
+                if (lotResponse.Status)
+                {
+                    //assign to notifuy property
+                    Vehiclee = lotResponse.vehicle;
+                    IsBusy = false;
+                    _Navigation.PushAsync(new Views.LotDetail.LotDetailPage(Vehiclee));
+                }
+                // if api response is null
+                else
+                {
+                    // show error
+                    await Application.Current.MainPage.DisplayAlert("Error", "Somethin went wrong, check internet settings", "OK");
+                    Debug.WriteLine("Error Message " + lotResponse.ErrorMessage);
+                    IsBusy = false;
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Something went wrong", "Cancel");
+                IsBusy = false;
+            }
+        }
+        #endregion
 
         private void onPropertyChanged(string v)
         {

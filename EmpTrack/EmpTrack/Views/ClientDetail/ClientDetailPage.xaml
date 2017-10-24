@@ -16,21 +16,18 @@
 
                     <!--Horizontal line-->
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
-                    
-                    <!--Activity indicator-->
-                    <ActivityIndicator VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
 
                     <!--Api response-->
-                    <StackLayout Margin="10,20,10,20" IsVisible="{Binding Visibility}">
+                    <StackLayout Margin="10,20,10,20">
 
                         <!--response for first name and last name inline-->
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="First Name :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding ClientDetail.firstName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding firstName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                             <Label Text="Last Name :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding ClientDetail.lastName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding lastName}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 
@@ -40,10 +37,10 @@
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="Age :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding ClientDetail.age}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding age}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                             <Label Text="Sex :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding ClientDetail.sex}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding sex}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 

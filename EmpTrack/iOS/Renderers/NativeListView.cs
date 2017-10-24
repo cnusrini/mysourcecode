@@ -8,18 +8,19 @@ using UIKit;
 using EmpTrack.Models;
 using EmpTrack.Customizations;
 using CoreGraphics;
+using Services.Models;
 
 namespace EmpTrack.iOS.Renderers
 {
     class NativeListView : UITableViewSource
     {
-        public static List<EntityClass> Settings { get; set; }
+        public static List<LotGroupEntity> Settings { get; set; }
 
         protected string cellIdentifier = typeof(NativeListCell).Name;
 
         public NativeListView()
         {
-            Settings = new List<EntityClass>();
+            Settings = new List<LotGroupEntity>();
         }
 
         //		public SettingsListSource (List<EntityClass> data)
@@ -39,7 +40,7 @@ namespace EmpTrack.iOS.Renderers
 
         public override string TitleForHeader(UITableView tableView, nint section)
         {
-            return Settings[(int)section].Title;
+            return Settings[(int)section].Location;
         }
 
         public override nfloat GetHeightForHeader(UITableView tableView, nint section)
@@ -51,7 +52,7 @@ namespace EmpTrack.iOS.Renderers
         {
             if (Settings[(int)section].IsSelected)
             {
-                return (nint)(Settings[(int)section].ChildItems != null ? Settings[(int)section].ChildItems.Count : 0);
+                return (nint)(Settings[(int)section].vehicle != null ? Settings[(int)section].vehicle.Count : 0);
             }
             else
             {
@@ -67,7 +68,7 @@ namespace EmpTrack.iOS.Renderers
             }
 
             //Code to change the status of the right icon in the row items		
-            var item = Settings[indexPath.Section].ChildItems[indexPath.Row];
+            var item = Settings[indexPath.Section].vehicle[indexPath.Row];
             if (item != null)
             {
 
@@ -118,7 +119,7 @@ namespace EmpTrack.iOS.Renderers
             seperatorLine.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
             btn.AddSubview(seperatorLine);
 
-            btn.SetTitle(Settings[(int)section].Title, UIControlState.Normal);
+            btn.SetTitle(Settings[(int)section].Location, UIControlState.Normal);
             btn.Font = UIFont.BoldSystemFontOfSize(NativeListCell.FontSize);
             btn.BackgroundColor = UIColor.Clear;
             btn.HorizontalAlignment = UIControlContentHorizontalAlignment.Left;
@@ -127,6 +128,7 @@ namespace EmpTrack.iOS.Renderers
                 //put in your code to toggle your boolean value here
                 if (Settings[(int)section].OnClickListener != null)
                 {
+
                     Settings[(int)section].OnClickListener.Invoke(Settings[(int)section]);
                 }
 
@@ -157,12 +159,12 @@ namespace EmpTrack.iOS.Renderers
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
 
-            var item = Settings[indexPath.Section].ChildItems[indexPath.Row];
+            var item = Settings[indexPath.Section].vehicle[indexPath.Row];
             var cell = (NativeListCell)tableView.DequeueReusableCell(cellIdentifier);
             if (cell == null)
                 cell = new NativeListCell(UITableViewCellStyle.Default, cellIdentifier, tableView.Frame);
 
-            cell.Title = item.Title;
+            cell.Title = item.Location;
 
             if (!string.IsNullOrEmpty(item.SelectedStateIcon) && !string.IsNullOrEmpty(item.DeselectedStateIcon))
             {

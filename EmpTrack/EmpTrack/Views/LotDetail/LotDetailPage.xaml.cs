@@ -15,23 +15,18 @@ namespace EmpTrack.Views.LotDetail
     public partial class LotDetailPage : ContentPage
     {
         LotDetailViewModel lotdetailViewModel;
-        public LotDetailPage(string lotnum)
+        public LotDetailPage(Vehicle vehicle)
         {
             InitializeComponent();
-            lotdetailViewModel = new LotDetailViewModel(Navigation , lotnum);
-            BindingContext = lotdetailViewModel;
+            lotdetailViewModel = new LotDetailViewModel(Navigation);
+            BindingContext = vehicle;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            FetchCarDetails();
             
         }
-
-        private async void FetchCarDetails()
-        {
-            await lotdetailViewModel.FetchCarDetailsByLotNum();          
-        }
+        
     }
 }

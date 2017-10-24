@@ -17,57 +17,13 @@ namespace EmpTrack.ViewModels.ClientDetail
         public event PropertyChangedEventHandler PropertyChanged;
 
         INavigation _Navigation;
-        Client clientDetail;
-        string ClientID = null;
-        public bool isbusy;
-        public bool visibility;
+        
 
-
-        public ClientDetailViewModel(INavigation _navigation,string clientid)
+        public ClientDetailViewModel(INavigation _navigation)
         {
             _Navigation = _navigation;
-            ClientID = clientid;
         }
-
-        public Client ClientDetail
-        {
-            get
-            {
-                return clientDetail;
-            }
-            set
-            {
-                clientDetail = value;
-                onPropertyChanged("ClientDetail");
-            }
-        }
-
-        public bool IsBusy
-        {
-            get
-            {
-                return isbusy;
-            }
-            set
-            {
-                isbusy = value;
-                onPropertyChanged("IsBusy");
-            }
-        }
-
-        public bool Visibility
-        {
-            get
-            {
-                return visibility;
-            }
-            set
-            {
-                visibility = value;
-                onPropertyChanged("Visibility");
-            }
-        }
-
+        
 
         public ICommand GetQuoteCommand
         {
@@ -79,33 +35,6 @@ namespace EmpTrack.ViewModels.ClientDetail
                 });
             }
         }
-
-        public async Task FetchClientDetail()
-        {
-            IsBusy = true;
-            var clientdetailservice = new ClientDetailsService();
-            ClientDetails clientResponse = await clientdetailservice.FetchClientDetails(ClientID);
-            if(clientResponse.Status)
-            {
-                ClientDetail = clientResponse.client;
-                IsBusy = false;
-                Visibility = true;
-            }
-            else
-            {
-                //else show error
-                await Application.Current.MainPage.DisplayAlert("Error", "Somethin went wrong, check internet settings", "OK");
-                Debug.WriteLine("Error Message : " + clientResponse.ErrorMessage);
-                IsBusy = false;
-            }
-
-        }
-
-
-        private void onPropertyChanged(string data)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(data));
-        }
-
+        
     }
 }

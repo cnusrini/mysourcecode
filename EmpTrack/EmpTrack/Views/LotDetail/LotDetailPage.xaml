@@ -15,24 +15,22 @@
 
                     <!--Horizontal line-->
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" BackgroundColor="Gray"/>
-
-                    <ActivityIndicator VerticalOptions="Start" HorizontalOptions="CenterAndExpand" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
                     
                     <!--Api response-->
-                    <StackLayout Padding="10,10,0,10" IsVisible="{Binding Visibility}">
+                    <StackLayout Padding="10,10,0,10">
                         
                         <!--response for make , model and year inline-->                        
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="Make :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Make}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Make}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
 
                             <Label Text="Model :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Model}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Model}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                             <Label Text="Year" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Year}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Year}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 
@@ -40,11 +38,11 @@
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="Class :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Class}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Class}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
 
                             <Label Text="Location :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Location}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Location}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 
@@ -52,7 +50,7 @@
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="Trim :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Trim}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Trim}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 
@@ -60,7 +58,7 @@
                         <StackLayout Orientation="Horizontal">
 
                             <Label Text="Description :" VerticalOptions="Start" HorizontalOptions="Start" TextColor="{StaticResource NormalTextColor}"/>
-                            <Label Text="{Binding Vehiclee.Description}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
+                            <Label Text="{Binding Description}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" TextColor="{StaticResource ApiResponseTextColor}"/>
 
                         </StackLayout>
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -35,7 +34,8 @@ namespace EmpTrack.Droid.Renderers
                 header = Context.LayoutInflater.Inflate(Resource.Layout.ListViewRenderer, null);
             }
             string parentTitle = DataList[groupPosition].Location;
-            header.FindViewById<TextView>(Resource.Id.txtView).Text = parentTitle;
+            int count = DataList[groupPosition].Count;
+            header.FindViewById<TextView>(Resource.Id.txtView).Text = parentTitle + " (" + count + ")";
             return header;
         }
 
@@ -48,7 +48,7 @@ namespace EmpTrack.Droid.Renderers
             }
             List<Vehicle> newValue = new List<Vehicle>();
            GetChildViewHelper(groupPosition, out newValue);
-            row.FindViewById<TextView>(Resource.Id.txtTitle).Text = newValue[childPosition].Location;
+            row.FindViewById<TextView>(Resource.Id.txtTitle).Text = newValue[childPosition].LotId;
             return row;
         }
 
@@ -71,13 +71,7 @@ namespace EmpTrack.Droid.Renderers
                 return DataList.Count;
             }
         }
-
-        //private void GetChildViewHelper(int groupPosition, out List<LotGroupEntity> Value)
-        //{
-        //    var results = DataList[groupPosition].vehicle;
-        //    Value = results;
-        //}
-
+        
         #region implemented abstract members of BaseExpandableListAdapter
 
         public override Java.Lang.Object GetChild(int groupPosition, int childPosition)

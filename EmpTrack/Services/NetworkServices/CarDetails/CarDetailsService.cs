@@ -14,7 +14,7 @@ namespace Services.NetworkServices.CarDetails
         {
             try
             {
-                string r = EmpTrack.Constants.APIsConstant.FetchLotDetails + "lot_id=6b6490fd-2191-428b-bc55-0e4646b0b1f4";
+                string r = EmpTrack.Constants.APIsConstant.FetchLotDetails + lot_id;
                 var responseJson = await client.GetAsync(r);
                 string json = await responseJson.Content.ReadAsStringAsync();
                 if (!json.Equals(null)) //only parse json if it contains data
@@ -35,7 +35,7 @@ namespace Services.NetworkServices.CarDetails
         {
             try
             {
-                string r = EmpTrack.Constants.APIsConstant.FetchLotList + "buyerId=12345678";
+                string r = EmpTrack.Constants.APIsConstant.FetchLotList + buyer_id;
                 var responseJson = await client.GetAsync(r);
                 string json = await responseJson.Content.ReadAsStringAsync();
                 if (!json.Equals(null)) //only parse json if it contains data

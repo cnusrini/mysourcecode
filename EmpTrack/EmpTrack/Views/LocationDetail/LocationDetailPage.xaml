@@ -5,8 +5,8 @@
              xmlns:local="clr-namespace:EmpTrack.Customizations"
              Title="Location Details">
     
-    <ContentPage.Content>
-        <!--<StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+    <!--<ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
             <StackLayout>
                 <local:CollapsibleListView x:Name="collapsibleListView" VerticalOptions="FillAndExpand"/>
                 <StackLayout>
@@ -15,6 +15,6 @@
                     </StackLayout.Children>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>-->
-    </ContentPage.Content>
+        </StackLayout>
+    </ContentPage.Content>-->
 </ContentPage>

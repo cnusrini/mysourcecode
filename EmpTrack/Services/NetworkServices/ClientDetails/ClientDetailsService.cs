@@ -12,7 +12,7 @@ namespace Services.NetworkServices.ClientDetails
     {
         public async Task<Models.ClientDetails> FetchClientDetails(string clientid)
         {
-            string r = EmpTrack.Constants.APIsConstant.FetchClientDetails + "id=DFM01";
+            string r = EmpTrack.Constants.APIsConstant.FetchClientDetails + clientid;
             var responseJson = await client.GetAsync(r);
             string json = await responseJson.Content.ReadAsStringAsync();
             try

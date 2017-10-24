@@ -15,11 +15,13 @@ namespace Services.Models
         public string DeselectedStateIcon { get; set; }
 
         public bool IsSelected { get; set; }
-
+        
+        public string SelectedStateIcon { get; set; }
 
         public Action<Vehicle> OnClickListener { get; set; }
 
         public string id { get; set; }
+        public string LotId { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
@@ -30,6 +32,8 @@ namespace Services.Models
         public string IsPicked { get; set; }
         public object BuyerID { get; set; }
         public string Location { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 
 

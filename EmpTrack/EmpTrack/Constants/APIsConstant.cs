@@ -9,13 +9,15 @@ namespace EmpTrack.Constants
     public class APIsConstant
     {
         //public static String BaseURL = "http://apidocapp.azurewebsites.net/";
-		//public static String BaseURL = "http://integratedmobile.azurewebsites.net/";
-        public static String BaseURL = "http://30474357.ngrok.io/api/";
+        public static String BaseURL = "http://integratedmobile.azurewebsites.net/";
+        //public static String BaseURL = "http://a194eabd.ngrok.io/api/";
+
+
         #region  web apis 
         public static String SaveEmpDetailAPI = "api/employee/request/profile";
-        public static String FetchLotDetails = "http://e5ec19fb.ngrok.io/api/vehicle/request/get/detail?";
-        public static String FetchClientDetails = "http://80b932ea.ngrok.io/api/client/request/get/detail?";
-        public static String FetchLotList = "vehicle/request/get/detail/buyerId?";
+        public static String FetchLotDetails = "vehicle/request/get/detail/lot?lot_id=";
+        public static String FetchClientDetails = "client/request/get/detail/?id=";
+        public static String FetchLotList = "vehicle/request/get/detail/buyerId?buyerId=";
 
         #endregion
 
@@ -35,7 +37,6 @@ namespace EmpTrack.Constants
         public const string IfWorkingWeekend = "ifWorkingWeekend";
         public const string IfComplianceVoilation = "ifComplianceVoilation";
         public const string WorkerAuthorization = "workerAuthorization";
-        public const string Lot_ID = "lot_id";
 		#endregion
 
 		#region Domains
