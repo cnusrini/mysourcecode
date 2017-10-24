@@ -1,4 +1,5 @@
 ﻿using EmpTrack.Models;
+using Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace EmpTrack.Customizations
     public class CollapsibleListView : View
     {
         public static readonly BindableProperty ItemsProperty =
-            BindableProperty.Create("Items", typeof(List<EntityClass>), typeof(CollapsibleListView), new List<EntityClass>());
+            BindableProperty.Create("Items", typeof(List<LotGroupEntity>), typeof(CollapsibleListView), new List<LotGroupEntity>());
 
-        public List<EntityClass> Items
+        public List<LotGroupEntity> Items
         {
-            get { return (List<EntityClass>)GetValue(ItemsProperty); }
+            get { return (List<LotGroupEntity>)GetValue(ItemsProperty); }
             set { SetValue(ItemsProperty, value); }
         }
 

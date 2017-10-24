@@ -71,7 +71,7 @@ namespace EmpTrack.ViewModels.Auction
                     }
                     else if(!String.IsNullOrEmpty(Buyer_ID))
                     {
-                        _Navigation.PushAsync(new Views.LocationDetail.LocationDetailPage());
+                        _Navigation.PushAsync(new Views.LocationDetail.LocationDetailPage(Buyer_ID));
                     }
                 });
             }

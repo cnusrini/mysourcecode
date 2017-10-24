@@ -41,7 +41,7 @@ namespace EmpTrack.Droid.Renderers
         
         public bool OnChildClick(ExpandableListView parent, Android.Views.View clickedView, int groupPosition, int childPosition, long id)
         {
-            var item = DataAdopterListViewRenderer.DataList[groupPosition].ChildItems[childPosition];
+            var item = DataAdopterListViewRenderer.DataList[groupPosition].vehicle[childPosition];
             if (item != null)
             {
                 if (item.OnClickListener != null)

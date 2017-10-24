@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using EmpTrack.Models;
+using Services.Models;
 
 namespace EmpTrack.Droid.Renderers
 {
@@ -18,13 +19,13 @@ namespace EmpTrack.Droid.Renderers
         readonly Activity Context;
 
         public static event EventHandler ProductRestoredCompleted;
-        public DataAdopterListViewRenderer(Activity newContext, List<EntityClass> newList) : base ()
+        public DataAdopterListViewRenderer(Activity newContext, List<LotGroupEntity> newList) : base ()
 		{
             Context = newContext;
             DataList = newList;
         }
 
-        public static List<EntityClass> DataList { get; set; }
+        public static List<LotGroupEntity> DataList { get; set; }
 
         public override Android.Views.View GetGroupView(int groupPosition, bool isExpanded, View convertView, ViewGroup parent)
         {
@@ -33,7 +34,8 @@ namespace EmpTrack.Droid.Renderers
             {
                 header = Context.LayoutInflater.Inflate(Resource.Layout.ListViewRenderer, null);
             }
-            header.FindViewById<TextView>(Resource.Id.txtView).Text = DataList[groupPosition].Title;
+            string parentTitle = DataList[groupPosition].Location;
+            header.FindViewById<TextView>(Resource.Id.txtView).Text = parentTitle;
             return header;
         }
 
@@ -44,15 +46,21 @@ namespace EmpTrack.Droid.Renderers
             {
                 row = Context.LayoutInflater.Inflate(Resource.Layout.ChildCell, null);
             }
-            List<EntityClass> newValue = new List<EntityClass>();
-            GetChildViewHelper(groupPosition, out newValue);
-            row.FindViewById<TextView>(Resource.Id.txtTitle).Text = newValue[childPosition].Title;
+            List<Vehicle> newValue = new List<Vehicle>();
+           GetChildViewHelper(groupPosition, out newValue);
+            row.FindViewById<TextView>(Resource.Id.txtTitle).Text = newValue[childPosition].Location;
             return row;
+        }
+
+        private void GetChildViewHelper(int groupPosition, out List<Vehicle> newValue)
+        {
+            var results = DataList[groupPosition].vehicle;
+            newValue = results;
         }
 
         public override int GetChildrenCount(int groupPosition)
         {
-            var results = DataList[groupPosition].ChildItems == null ? 0 : DataList[groupPosition].ChildItems.Count;
+            var results = DataList[groupPosition].vehicle == null ? 0 : DataList[groupPosition].vehicle.Count;
             return results;
         }
 
@@ -64,11 +72,11 @@ namespace EmpTrack.Droid.Renderers
             }
         }
 
-        private void GetChildViewHelper(int groupPosition, out List<EntityClass> Value)
-        {
-            var results = DataList[groupPosition].ChildItems;
-            Value = results;
-        }
+        //private void GetChildViewHelper(int groupPosition, out List<LotGroupEntity> Value)
+        //{
+        //    var results = DataList[groupPosition].vehicle;
+        //    Value = results;
+        //}
 
         #region implemented abstract members of BaseExpandableListAdapter
 

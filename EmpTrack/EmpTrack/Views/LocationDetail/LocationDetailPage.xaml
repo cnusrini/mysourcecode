@@ -8,7 +8,12 @@
     <ContentPage.Content>
         <!--<StackLayout VerticalOptions="Start" HorizontalOptions="Start">
             <StackLayout>
-                <local:CollapsibleListView x:Name="collapsibleListView"/>
+                <local:CollapsibleListView x:Name="collapsibleListView" VerticalOptions="FillAndExpand"/>
+                <StackLayout>
+                    <StackLayout.Children>
+                        
+                    </StackLayout.Children>
+                </StackLayout>
             </StackLayout>
         </StackLayout>-->
     </ContentPage.Content>

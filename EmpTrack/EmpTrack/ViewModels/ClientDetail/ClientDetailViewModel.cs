@@ -17,7 +17,7 @@ namespace EmpTrack.ViewModels.ClientDetail
         public event PropertyChangedEventHandler PropertyChanged;
 
         INavigation _Navigation;
-        ClientDetails clientDetail;
+        Client clientDetail;
         string ClientID = null;
         public bool isbusy;
         public bool visibility;
@@ -29,7 +29,7 @@ namespace EmpTrack.ViewModels.ClientDetail
             ClientID = clientid;
         }
 
-        public ClientDetails ClientDetail
+        public Client ClientDetail
         {
             get
             {
@@ -82,11 +82,12 @@ namespace EmpTrack.ViewModels.ClientDetail
 
         public async Task FetchClientDetail()
         {
+            IsBusy = true;
             var clientdetailservice = new ClientDetailsService();
             ClientDetails clientResponse = await clientdetailservice.FetchClientDetails(ClientID);
             if(clientResponse.Status)
             {
-                ClientDetail = clientResponse;
+                ClientDetail = clientResponse.client;
                 IsBusy = false;
                 Visibility = true;
             }
@@ -94,7 +95,7 @@ namespace EmpTrack.ViewModels.ClientDetail
             {
                 //else show error
                 await Application.Current.MainPage.DisplayAlert("Error", "Somethin went wrong, check internet settings", "OK");
-                Debug.WriteLine("Error Message " + clientResponse.ErrorMessage);
+                Debug.WriteLine("Error Message : " + clientResponse.ErrorMessage);
                 IsBusy = false;
             }
 

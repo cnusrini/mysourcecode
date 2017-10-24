@@ -11,6 +11,14 @@ namespace Services.Models
 
     public class Vehicle
     {
+
+        public string DeselectedStateIcon { get; set; }
+
+        public bool IsSelected { get; set; }
+
+
+        public Action<Vehicle> OnClickListener { get; set; }
+
         public string id { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }

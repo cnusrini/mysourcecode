@@ -12,22 +12,18 @@ namespace Services.NetworkServices.ClientDetails
     {
         public async Task<Models.ClientDetails> FetchClientDetails(string clientid)
         {
+            string r = EmpTrack.Constants.APIsConstant.FetchClientDetails + "id=DFM01";
+            var responseJson = await client.GetAsync(r);
+            string json = await responseJson.Content.ReadAsStringAsync();
             try
             {
-                string r = EmpTrack.Constants.APIsConstant.FetchLotDetails + "lot_id=6b6490fd-2191-428b-bc55-0e4646b0b1f4";
-                var responseJson = await client.GetAsync(r);
-                string json = await responseJson.Content.ReadAsStringAsync();
-                if (!json.Equals(null)) //only parse json if it contains data
-                {
-                    var lotresponse = JsonConvert.DeserializeObject<Services.Models.ClientDetails>(json);
-                    return lotresponse;
-                }
+                var lotresponse = JsonConvert.DeserializeObject<Services.Models.ClientDetails>(json);
+                return lotresponse;
             }
-            catch (Exception ex)
+            catch
             {
-                Debug.WriteLine("FetchMeditationBaseOn Id", ex.Message);
+                Debug.WriteLine("Bad Request");
             }
-
             return null;
         }
     }

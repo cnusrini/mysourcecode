@@ -84,7 +84,7 @@ namespace EmpTrack.ViewModels.LotDetail
         public async Task FetchCarDetailsByLotNum()
         {
             IsBusy = true;
-            var carDetailByLotNum = new CarDetailsByLotNum();
+            var carDetailByLotNum = new CarDetailsService();
             LotDetails lotResponse = await carDetailByLotNum.FetchCarDetailsByLotNumber(LotNum);
             if (lotResponse.Status)
             {

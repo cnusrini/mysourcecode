@@ -6,10 +6,17 @@ namespace Services.Models
 {
     public class ClientDetails : BaseServerResponse
     {
-        public string clientid { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
-        public string Sex { get; set; }
+        public Client client { get; set; }
     }
+
+    public class Client
+    {
+        public string id { get; set; }
+        public string clientId { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int age { get; set; }
+        public string sex { get; set; }
+    }
+
 }

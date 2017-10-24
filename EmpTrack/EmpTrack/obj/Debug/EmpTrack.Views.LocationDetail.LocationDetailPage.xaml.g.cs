@@ -11,8 +11,8 @@
 namespace EmpTrack.Views.LocationDetail {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\EmpTracking\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\LocationDetail\\Locati" +
-        "onDetailPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Project\\Emp_Track\\mysourcecode\\EmpTrack\\EmpTrack\\Views\\LocationDetail\\Location" +
+        "DetailPage.xaml")]
     public partial class LocationDetailPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
